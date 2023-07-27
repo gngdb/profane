@@ -5,4 +5,8 @@ d = { 'settings': { 'branch': 'main',
                 'doc_host': 'https://gngdb.github.io',
                 'git_url': 'https://github.com/gngdb/profane',
                 'lib_path': 'profane'},
-  'syms': {'profane.core': {'profane.core.foo': ('core.html#foo', 'profane/core.py')}}}
+  'syms': { 'profane.core': { 'profane.core.ProfaneTeardownHook': ('core.html#profaneteardownhook', 'profane/core.py'),
+                              'profane.core.ProfaneTeardownStage': ('core.html#profaneteardownstage', 'profane/core.py'),
+                              'profane.core.foo': ('core.html#foo', 'profane/core.py'),
+                              'profane.core.init': ('core.html#init', 'profane/core.py'),
+                              'profane.core.parse_output_log': ('core.html#parse_output_log', 'profane/core.py')}}}
