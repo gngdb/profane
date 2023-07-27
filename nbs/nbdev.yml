@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "profane"
+  site-url: "https://gngdb.github.io/profane"
+  description: "Not sacred"
+  repo-branch: main
+  repo-url: "https://github.com/gngdb/profane"
