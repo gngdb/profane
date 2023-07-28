@@ -8,6 +8,7 @@ __all__ = ['RCDIR', 'parse_args', 'setup', 'get_config', 'ProfaneTeardownStage',
 import argparse
 from pathlib import Path
 
+# this is used for testing
 RCDIR = None
 
 def parse_args():
