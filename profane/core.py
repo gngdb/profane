@@ -21,7 +21,7 @@ def get_rcdir():
 
 # %% ../nbs/00_core.ipynb 4
 def parse_args():
-    argument_callback = argparse.Argumentcallback("Set up a ~/.profanerc file and register the required directories.")
+    argument_callback = argparse.ArgumentParser("Set up a ~/.profanerc file and register the required directories.")
     argument_callback.add_argument('local_storage', type=Path, help="The local storage directory, everything will be stored here.")
     argument_callback.add_argument('shared_storage', type=Path, help="The shared storage directory, only the terminal logs and metadata will be stored here.")
     argument_callback.add_argument('--user', type=str, default=None, help="Optional: The user name to use for the shared storage directory.")
