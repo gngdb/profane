@@ -2,7 +2,8 @@
 
 # %% auto 0
 __all__ = ['RCDIR', 'logger', 'get_rcdir', 'parse_args', 'setup', 'write_profanerc', 'get_config', 'iterate_records',
-           'parse_output_log', 'parse_stats', 'create_dirs', 'SyncLocalCallback', 'SyncSharedCallback', 'init']
+           'parse_output_log', 'parse_stats', 'create_dirs', 'SyncLocalCallback', 'SyncSharedCallback',
+           'system_to_string', 'git_patch_callback', 'git_status', 'git_branch', 'init']
 
 # %% ../nbs/00_core.ipynb 3
 import argparse
@@ -20,11 +21,11 @@ def get_rcdir():
 
 # %% ../nbs/00_core.ipynb 4
 def parse_args():
-    argument_parser = argparse.ArgumentParser("Set up a ~/.profanerc file and register the required directories.")
-    argument_parser.add_argument('local_storage', type=Path, help="The local storage directory, everything will be stored here.")
-    argument_parser.add_argument('shared_storage', type=Path, help="The shared storage directory, only the terminal logs and metadata will be stored here.")
-    argument_parser.add_argument('--user', type=str, default=None, help="Optional: The user name to use for the shared storage directory.")
-    return argument_parser.parse_args()
+    argument_callback = argparse.Argumentcallback("Set up a ~/.profanerc file and register the required directories.")
+    argument_callback.add_argument('local_storage', type=Path, help="The local storage directory, everything will be stored here.")
+    argument_callback.add_argument('shared_storage', type=Path, help="The shared storage directory, only the terminal logs and metadata will be stored here.")
+    argument_callback.add_argument('--user', type=str, default=None, help="Optional: The user name to use for the shared storage directory.")
+    return argument_callback.parse_args()
 
 # %% ../nbs/00_core.ipynb 5
 def setup():
@@ -150,22 +151,25 @@ def parse_stats(data_path):
     header = ['relative_seconds'] + names
     return ', '.join(header) + '\n' + '\n'.join([', '.join([str(v) for v in row]) for row in rows])
 
-# %% ../nbs/00_core.ipynb 15
+# %% ../nbs/00_core.ipynb 14
 import wandb
-from enum import IntEnum
 import shutil
-from distutils.dir_util import copy_tree
 import os
 import atexit
-from wandb.sdk.wandb_run import TeardownHook, TeardownStage
 import time
 import logging
+import subprocess
+import sys
+
+from enum import IntEnum
+from distutils.dir_util import copy_tree
+from wandb.sdk.wandb_run import TeardownHook, TeardownStage
 
 # don't print anything by default
 logging.basicConfig(format='%(asctime)s %(message)s %(name)s', level=logging.WARNING)
 logger = logging.getLogger(__name__)
 
-# %% ../nbs/00_core.ipynb 16
+# %% ../nbs/00_core.ipynb 15
 def create_dirs(run_id, user, project):
     """Create shared and local sub-directories for a run
     in the shared and local storage directories.
@@ -179,7 +183,7 @@ def create_dirs(run_id, user, project):
     local_dir.mkdir(parents=True)
     return shared_dir, local_dir
 
-# %% ../nbs/00_core.ipynb 17
+# %% ../nbs/00_core.ipynb 16
 class SyncLocalCallback:
     """Callback to sync wandb dir to local storage."""
     def __init__(self):
@@ -209,23 +213,24 @@ class SyncLocalCallback:
             logger.info(f"copied {self.wandb_dir} to {self.local_dir}")
             self.exited = True
 
-# %% ../nbs/00_core.ipynb 18
+# %% ../nbs/00_core.ipynb 17
 class SyncSharedCallback:
     """Callback to sync the shared directory with the wandb directory"""
     def __init__(self):
         self.exited = False
-        self.parsers = []
+        self.callbacks = []
 
     def register_dirs(self, shared_dir, wandb_dir):
         self.shared_dir = shared_dir
         self.wandb_dir = wandb_dir
 
-    def register_parser(self, parser):
+    def register_callback(self, callback):
         """
-        Register functions to act as parsers on `.wandb` files.
-        Expect them to return a string and a filename.
+        Register functions to act as callbacks on `.wandb` files.
+        That's right, my callback has callbacks.
+        Expect these to return a string to save and a filename to save it as.
         """
-        self.parsers.append(parser)
+        self.callbacks.append(callback)
 
     def __call__(self):
         logger.info("shared callback called")
@@ -237,46 +242,99 @@ class SyncSharedCallback:
                         wandb_file = path_object
                         break
             # parse the wandb file
-            for parser in self.parsers:
-                s, filename = parser(wandb_file)
+            state = {'wandb_file': wandb_file}
+            for callback in self.callbacks:
+                s, filename = callback(state)
                 # write to shared_dir
                 with open(self.shared_dir / filename, 'w') as f:
                     f.write(s)
-            # this should be where the metadata is
-            metadata_file = self.wandb_dir / "files/wandb-metadata.json"
-            # copy metadata file and write output log
-            shutil.copy(metadata_file, self.shared_dir)
-            logger.info(f"file written to {self.shared_dir / 'output.log'}")
+                logger.info(f"{self.shared_dir / filename} written")
+            # iterate over files in wandb/files directory
+            for path_object in (self.wandb_dir / 'files').rglob('*'):
+                if path_object.is_file():
+                    # copy file to shared_dir
+                    shutil.copy(path_object, self.shared_dir)
+                    logger.info(f"{path_object} copied to {self.shared_dir}")
             self.exited = True
 
+# %% ../nbs/00_core.ipynb 18
+def system_to_string(command):
+    """Run system command, capture and decode the output to string."""
+    if type(command) == str:
+        command = command.split(' ')
+    return subprocess.check_output(command).decode('utf-8')
+
 # %% ../nbs/00_core.ipynb 19
+def git_patch_callback():
+    """Callback that creates a patch for the changes in the current directory."""
+    return system_to_string(['git', 'diff', 'HEAD'])
+
+# %% ../nbs/00_core.ipynb 20
+def git_status():
+    "Git status in currently directory"
+    return system_to_string(['git', 'status'])
+
+def git_branch():
+    "Current branch"
+    return system_to_string(["git", "rev-parse", "--abbrev-ref", "HEAD"])
+
+# %% ../nbs/00_core.ipynb 21
 def init(**kwargs):
     """
     A wrapper for `wandb.init`. kwargs are passed to `wandb.init` with the
     following modifications:
+
     - if not specified `mode` is set to `offline`
+    - kwargs prefixed by "profane_" are stripped of the prefix and used to
+        configure the `profane` hooks:
+        - `profane_save`: a list of paths to plaintext files to save to 
+        the shared directory, for example `profane_save=['README.md']`
     """
+    # separate profane kwargs from wandb kwargs
+    pkwargs = {}
+    for k, v in kwargs.items():
+        if k.startswith('profane_'):
+            pkwargs[k[8:]] = v
+    kwargs = {k: v for k, v in kwargs.items() if not k.startswith('profane_')}
+    # initialize hooks
     local_hook = SyncLocalCallback()
     shared_hook = SyncSharedCallback()
+    # initialize wandb
     if 'mode' not in kwargs: 
         kwargs['mode'] = 'offline'
     run = wandb.init(**kwargs)
+    # configure hooks
     config = get_config()
     wandb_dir = Path(run.dir).parent
     username = os.environ['USER'] if 'user' not in config else config['user']
     shared_dir, local_dir = create_dirs(wandb_dir.name, username, run.project)
     shared_hook.register_dirs(shared_dir, wandb_dir)
-    shared_hook.register_parser(lambda f: (parse_output_log(f), 'output.log'))
-    shared_hook.register_parser(lambda f: (parse_stats(f), 'system_stats.csv'))
+    shared_hook.register_callback(lambda s: (parse_output_log(s['wandb_file']), 'output.log'))
+    shared_hook.register_callback(lambda s: (parse_stats(s['wandb_file']), 'system_stats.csv'))
+    shared_hook.register_callback(lambda s: (git_patch_callback(), 'git.patch'))
+    shared_hook.register_callback(lambda s: (git_status(), 'git.status'))
+    # register save paths
+    if 'save' in pkwargs:
+        for path in pkwargs['save']:
+            if isinstance(path, str):
+                path = Path(path)
+            assert path.exists(), f"Path {path} does not exist"
+            assert path.is_file(), f"Path {path} is not a file"
+            # assuming path is plaintext
+            shared_hook.register_callback(lambda s, path=path: (path.read_text(), path.name))
+    shared_hook.register_callback(lambda s: (' '.join(sys.argv), 'argv.txt'))
     local_hook.register_dirs(local_dir, wandb_dir)
     # this will trigger if run.finish() is called
+    def report_exit():
+        print(f"profane: logs saved to {shared_dir}")
+        print(f"profane: wandb copied to {local_dir}")
     run._teardown_hooks += [TeardownHook(local_hook, TeardownStage.LATE),
-                            TeardownHook(shared_hook, TeardownStage.LATE)]
+                            TeardownHook(shared_hook, TeardownStage.LATE),
+                            TeardownHook(report_exit, TeardownStage.LATE)]
     def finish():
         logger.info("atexit profane.init finish hook called")
         run.finish()
-        local_hook()
-        shared_hook()
-    # this will trigger in other cases, e.g. if the process is killed
+    # this is necessary because wandb doesn't use the teardown hooks otherwise
+    # so it just kind of forces it to happen
     atexit.register(finish)
     return run
