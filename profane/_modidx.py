@@ -28,6 +28,7 @@ d = { 'settings': { 'branch': 'main',
                               'profane.core.parse_args': ('core.html#parse_args', 'profane/core.py'),
                               'profane.core.parse_output_log': ('core.html#parse_output_log', 'profane/core.py'),
                               'profane.core.parse_stats': ('core.html#parse_stats', 'profane/core.py'),
+                              'profane.core.run': ('core.html#run', 'profane/core.py'),
                               'profane.core.setup': ('core.html#setup', 'profane/core.py'),
                               'profane.core.system_to_string': ('core.html#system_to_string', 'profane/core.py'),
                               'profane.core.write_profanerc': ('core.html#write_profanerc', 'profane/core.py')}}}

@@ -3,7 +3,7 @@
 # %% auto 0
 __all__ = ['RCDIR', 'logger', 'get_rcdir', 'parse_args', 'setup', 'write_profanerc', 'get_config', 'iterate_records',
            'parse_output_log', 'parse_stats', 'create_dirs', 'SyncLocalCallback', 'SyncSharedCallback',
-           'system_to_string', 'git_patch_callback', 'git_status', 'git_branch', 'init']
+           'system_to_string', 'git_patch_callback', 'git_status', 'git_branch', 'init', 'run']
 
 # %% ../nbs/00_core.ipynb 3
 import argparse
@@ -338,3 +338,19 @@ def init(**kwargs):
     # so it just kind of forces it to happen
     atexit.register(finish)
     return run
+
+# %% ../nbs/00_core.ipynb 23
+def run():
+    """Run a command with profane using a console script."""
+    argv = sys.argv[1:]
+    if len(argv) == 0:
+        print("profane: no command specified")
+        return
+    # init profane
+    run = init()
+    # get the command
+    proc = subprocess.run(argv)
+    if proc.returncode != 0:
+        raise RuntimeError(f"Command {argv} failed with return code {proc.returncode}") 
+    # finish profane
+    run.finish()
