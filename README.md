@@ -98,3 +98,14 @@ init(
 
 `project` is used to name the directory in `shared` and `local` that
 will store whatever is logged.
+
+## Console Script
+
+For commands that you’d like to log but you can’t edit, a console script
+is included:
+
+    profane_subprocess <any command>
+
+Will use `subprocess.run` to run `<any command>` and store the result.
+To set the project for the current directory, you can use
+[`wandb init`](https://docs.wandb.ai/ref/cli/wandb-init).
