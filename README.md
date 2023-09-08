@@ -64,7 +64,7 @@ pip install -e .
 
 ## How to use
 
-Before using `profane` run setup to set `local` and `shared` storage:
+Before using `profane`, run setup to set `local` and `shared` storage:
 
 ``` python
 !profane_setup --help
@@ -685,14 +685,14 @@ relative_seconds, gpu.0.gpu, gpu.0.memoryAllocated, gpu.0.temp, gpu.0.powerWatts
     "cuda": null,
     "args": [],
     "state": "running",
-    "program": "/Users/gngdb/ws/pytorch_examples/mnist/main.py",
+    "program": "/REDACTED/mnist/main.py",
     "codePath": "mnist/main.py",
     "git": {
         "remote": "git@github.com:pytorch/examples.git",
         "commit": "cead596caa90600188e1055cd9166ab4e7dfd303"
     },
-    "email": "gavia.gray@cerebras.net",
-    "root": "/Users/gngdb/ws/pytorch_examples",
+    "email": "REDACTED",
+    "root": "/REDACTED",
     "host": "Gavias-MacBook-Pro.local",
     "username": "gngdb",
     "executable": "/opt/homebrew/Caskroom/miniconda/base/envs/torch_nightly/bin/python",
