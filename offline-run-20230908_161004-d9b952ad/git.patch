@@ -1,0 +1,15 @@
+diff --git a/mnist/main.py b/mnist/main.py
+index 29d81d6..a95afa2 100644
+--- a/mnist/main.py
++++ b/mnist/main.py
+@@ -99,6 +99,10 @@ def main():
+     use_cuda = not args.no_cuda and torch.cuda.is_available()
+     use_mps = not args.no_mps and torch.backends.mps.is_available()
+ 
++    from profane.core import init
++
++    init(config=vars(args), project='mnist')
++
+     torch.manual_seed(args.seed)
+ 
+     if use_cuda:

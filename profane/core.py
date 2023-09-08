@@ -3,9 +3,9 @@
 # %% auto 0
 __all__ = ['RCDIR', 'logger', 'get_rcdir', 'parse_args', 'setup', 'write_profanerc', 'get_config', 'iterate_records',
            'parse_output_log', 'parse_stats', 'create_dirs', 'SyncLocalCallback', 'SyncSharedCallback',
-           'system_to_string', 'git_patch_callback', 'git_status', 'git_branch', 'init', 'run']
+           'system_to_string', 'git_patch_callback', 'git_status', 'git_branch', 'init']
 
-# %% ../nbs/00_core.ipynb 3
+# %% ../nbs/00_core.ipynb 4
 import argparse
 from pathlib import Path
 
@@ -19,7 +19,7 @@ def get_rcdir():
         rcdir = Path(rcdir)
     return rcdir
 
-# %% ../nbs/00_core.ipynb 4
+# %% ../nbs/00_core.ipynb 6
 def parse_args():
     argument_callback = argparse.ArgumentParser("Set up a ~/.profanerc file and register the required directories.")
     argument_callback.add_argument('local_storage', type=Path, help="The local storage directory, everything will be stored here.")
@@ -27,13 +27,13 @@ def parse_args():
     argument_callback.add_argument('--user', type=str, default=None, help="Optional: The user name to use for the shared storage directory.")
     return argument_callback.parse_args()
 
-# %% ../nbs/00_core.ipynb 5
+# %% ../nbs/00_core.ipynb 7
 def setup():
     """Parses args and calls write_profanerc()"""
     args = parse_args() 
     return write_profanerc(args.local_storage, args.shared_storage, args.user)
 
-# %% ../nbs/00_core.ipynb 6
+# %% ../nbs/00_core.ipynb 8
 def write_profanerc(local_storage, shared_storage, user):
     """
     Function to set up the ~/.profanerc file and register the required directories.
@@ -54,7 +54,7 @@ def write_profanerc(local_storage, shared_storage, user):
     config_file = rcdir / ".profanerc"
     config_file.write_text(f"local_storage={str(local_storage.resolve())}\nshared_storage={str(shared_storage.resolve())}" + (f"\nuser={user}" if user else ""))
 
-# %% ../nbs/00_core.ipynb 7
+# %% ../nbs/00_core.ipynb 9
 def get_config():
     """
     Function to load the config from the ~/.profanerc file.
@@ -82,11 +82,11 @@ def get_config():
         config[key] = value
     return config
 
-# %% ../nbs/00_core.ipynb 9
+# %% ../nbs/00_core.ipynb 11
 from wandb.proto import wandb_internal_pb2
 from wandb.sdk.internal import datastore
 
-# %% ../nbs/00_core.ipynb 10
+# %% ../nbs/00_core.ipynb 12
 def iterate_records(data_path):
     """Iterates over wandb's protobuf records in `.wandb` files."""
     # https://github.com/wandb/wandb/issues/1768#issuecomment-976786476 
@@ -106,7 +106,7 @@ def iterate_records(data_path):
         data = ds.scan_record()
 
 
-# %% ../nbs/00_core.ipynb 11
+# %% ../nbs/00_core.ipynb 13
 def parse_output_log(data_path):
     """
     Parse wandb data from a given path.
@@ -121,7 +121,7 @@ def parse_output_log(data_path):
             terminal_log.append(pb.output_raw.line)
     return "".join(terminal_log)
 
-# %% ../nbs/00_core.ipynb 12
+# %% ../nbs/00_core.ipynb 14
 from collections import OrderedDict
 
 def parse_stats(data_path):
@@ -131,6 +131,7 @@ def parse_stats(data_path):
     """
     rows = OrderedDict()
     names = []
+    min_seconds = None
     for pb in iterate_records(data_path):
         if pb.stats:
             row = {}
@@ -141,7 +142,10 @@ def parse_stats(data_path):
                 row[stat.key] = stat.value_json
                 n += 1
             if n > 0:
-                rows[pb.stats.timestamp.seconds] = row
+                if min_seconds is None:
+                    min_seconds = pb.stats.timestamp.seconds
+                seconds = pb.stats.timestamp.seconds - min_seconds
+                rows[seconds] = row 
     # sort each row using names
     _rows = []
     for k, v in rows.items():
@@ -151,17 +155,16 @@ def parse_stats(data_path):
     header = ['relative_seconds'] + names
     return ', '.join(header) + '\n' + '\n'.join([', '.join([str(v) for v in row]) for row in rows])
 
-# %% ../nbs/00_core.ipynb 14
+# %% ../nbs/00_core.ipynb 16
 import wandb
 import shutil
 import os
 import atexit
-import time
 import logging
 import subprocess
 import sys
+import json
 
-from enum import IntEnum
 from distutils.dir_util import copy_tree
 from wandb.sdk.wandb_run import TeardownHook, TeardownStage
 
@@ -169,7 +172,7 @@ from wandb.sdk.wandb_run import TeardownHook, TeardownStage
 logging.basicConfig(format='%(asctime)s %(message)s %(name)s', level=logging.WARNING)
 logger = logging.getLogger(__name__)
 
-# %% ../nbs/00_core.ipynb 15
+# %% ../nbs/00_core.ipynb 17
 def create_dirs(run_id, user, project):
     """Create shared and local sub-directories for a run
     in the shared and local storage directories.
@@ -183,7 +186,7 @@ def create_dirs(run_id, user, project):
     local_dir.mkdir(parents=True)
     return shared_dir, local_dir
 
-# %% ../nbs/00_core.ipynb 16
+# %% ../nbs/00_core.ipynb 18
 class SyncLocalCallback:
     """Callback to sync wandb dir to local storage."""
     def __init__(self):
@@ -213,9 +216,9 @@ class SyncLocalCallback:
             logger.info(f"copied {self.wandb_dir} to {self.local_dir}")
             self.exited = True
 
-# %% ../nbs/00_core.ipynb 17
+# %% ../nbs/00_core.ipynb 19
 class SyncSharedCallback:
-    """Callback to sync the shared directory with the wandb directory"""
+    """Callback to sync the shared directory with the wandb directory, contains `callback`s that it calls when called."""
     def __init__(self):
         self.exited = False
         self.callbacks = []
@@ -257,19 +260,19 @@ class SyncSharedCallback:
                     logger.info(f"{path_object} copied to {self.shared_dir}")
             self.exited = True
 
-# %% ../nbs/00_core.ipynb 18
+# %% ../nbs/00_core.ipynb 20
 def system_to_string(command):
     """Run system command, capture and decode the output to string."""
     if type(command) == str:
         command = command.split(' ')
     return subprocess.check_output(command).decode('utf-8')
 
-# %% ../nbs/00_core.ipynb 19
+# %% ../nbs/00_core.ipynb 21
 def git_patch_callback():
     """Callback that creates a patch for the changes in the current directory."""
     return system_to_string(['git', 'diff', 'HEAD'])
 
-# %% ../nbs/00_core.ipynb 20
+# %% ../nbs/00_core.ipynb 22
 def git_status():
     "Git status in currently directory"
     return system_to_string(['git', 'status'])
@@ -278,7 +281,7 @@ def git_branch():
     "Current branch"
     return system_to_string(["git", "rev-parse", "--abbrev-ref", "HEAD"])
 
-# %% ../nbs/00_core.ipynb 21
+# %% ../nbs/00_core.ipynb 23
 def init(**kwargs):
     """
     A wrapper for `wandb.init`. kwargs are passed to `wandb.init` with the
@@ -313,6 +316,10 @@ def init(**kwargs):
     shared_hook.register_callback(lambda s: (parse_stats(s['wandb_file']), 'system_stats.csv'))
     shared_hook.register_callback(lambda s: (git_patch_callback(), 'git.patch'))
     shared_hook.register_callback(lambda s: (git_status(), 'git.status'))
+    # extract config if it exists
+    if 'config' in kwargs:
+        json_config = json.dumps(kwargs['config'], indent=4, sort_keys=True)
+        shared_hook.register_callback(lambda s: (json_config, 'config.json'))
     # register save paths
     if 'save' in pkwargs:
         for path in pkwargs['save']:
@@ -338,19 +345,3 @@ def init(**kwargs):
     # so it just kind of forces it to happen
     atexit.register(finish)
     return run
-
-# %% ../nbs/00_core.ipynb 23
-def run():
-    """Run a command with profane using a console script."""
-    argv = sys.argv[1:]
-    if len(argv) == 0:
-        print("profane: no command specified")
-        return
-    # init profane
-    run = init()
-    # get the command
-    proc = subprocess.run(argv)
-    if proc.returncode != 0:
-        raise RuntimeError(f"Command {argv} failed with return code {proc.returncode}") 
-    # finish profane
-    run.finish()

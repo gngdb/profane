@@ -1,0 +1,34 @@
+{
+    "os": "macOS-13.5.1-arm64-arm-64bit",
+    "python": "3.11.3",
+    "heartbeatAt": "2023-09-08T20:10:04.564308",
+    "startedAt": "2023-09-08T20:10:04.524040",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/REDACTED/mnist/main.py",
+    "codePath": "mnist/main.py",
+    "git": {
+        "remote": "git@github.com:pytorch/examples.git",
+        "commit": "cead596caa90600188e1055cd9166ab4e7dfd303"
+    },
+    "email": "REDACTED",
+    "root": "/REDACTED",
+    "host": "Gavias-MacBook-Pro.local",
+    "username": "gngdb",
+    "executable": "/opt/homebrew/Caskroom/miniconda/base/envs/torch_nightly/bin/python",
+    "cpu_count": 10,
+    "cpu_count_logical": 10,
+    "disk": {
+        "total": 926.3517189025879,
+        "used": 86.2264518737793
+    },
+    "gpuapple": {
+        "type": "arm",
+        "vendor": "Apple"
+    },
+    "memory": {
+        "total": 16.0
+    }
+}
