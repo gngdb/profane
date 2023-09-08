@@ -691,7 +691,7 @@ relative_seconds, gpu.0.gpu, gpu.0.memoryAllocated, gpu.0.temp, gpu.0.powerWatts
         "remote": "git@github.com:pytorch/examples.git",
         "commit": "cead596caa90600188e1055cd9166ab4e7dfd303"
     },
-    "email": "***REMOVED***",
+    "email": "gavia.gray@cerebras.net",
     "root": "/Users/gngdb/ws/pytorch_examples",
     "host": "Gavias-MacBook-Pro.local",
     "username": "gngdb",
