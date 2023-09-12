@@ -2,7 +2,7 @@
 
 # %% auto 0
 __all__ = ['RCDIR', 'logger', 'get_rcdir', 'parse_args', 'setup', 'write_profanerc', 'get_config', 'iterate_records',
-           'parse_output_log', 'parse_stats', 'create_dirs', 'SyncLocalCallback', 'SyncSharedCallback',
+           'history_csv', 'parse_output_log', 'parse_stats', 'create_dirs', 'SyncLocalCallback', 'SyncSharedCallback',
            'system_to_string', 'git_patch_callback', 'git_status', 'git_branch', 'init']
 
 # %% ../nbs/00_core.ipynb 4
@@ -105,8 +105,33 @@ def iterate_records(data_path):
             continue
         data = ds.scan_record()
 
+# %% ../nbs/00_core.ipynb 16
+import json
+from collections import defaultdict
 
-# %% ../nbs/00_core.ipynb 13
+def history_csv(wandb_file_path):
+    rows = []
+    for pb in iterate_records(wandb_file_path):
+        record_type = pb.WhichOneof('record_type')
+        if record_type == "history":
+            # iterate over `item` entries in this record
+            row = defaultdict(lambda: float('nan')) # default value is nan
+            for item in pb.history.item:
+                row[item.key] = json.loads(item.value_json)
+            rows.append(row)
+    if len(rows) == 0:
+        return ""
+    cols = sorted(list(set([k for r in rows for k in r.keys()]))) # get all unique keys
+    # put "_step" first
+    cols.remove("_step")
+    cols.insert(0, "_step")
+    csv_str = ""
+    csv_str += ",".join(cols) + "\n"
+    for row in rows:
+        csv_str += ",".join(json.dumps(row[k]) for k in cols) + "\n"
+    return csv_str
+
+# %% ../nbs/00_core.ipynb 20
 def parse_output_log(data_path):
     """
     Parse wandb data from a given path.
@@ -121,7 +146,7 @@ def parse_output_log(data_path):
             terminal_log.append(pb.output_raw.line)
     return "".join(terminal_log)
 
-# %% ../nbs/00_core.ipynb 14
+# %% ../nbs/00_core.ipynb 22
 from collections import OrderedDict
 
 def parse_stats(data_path):
@@ -155,7 +180,7 @@ def parse_stats(data_path):
     header = ['relative_seconds'] + names
     return ', '.join(header) + '\n' + '\n'.join([', '.join([str(v) for v in row]) for row in rows])
 
-# %% ../nbs/00_core.ipynb 16
+# %% ../nbs/00_core.ipynb 24
 import wandb
 import shutil
 import os
@@ -172,7 +197,7 @@ from wandb.sdk.wandb_run import TeardownHook, TeardownStage
 logging.basicConfig(format='%(asctime)s %(message)s %(name)s', level=logging.WARNING)
 logger = logging.getLogger(__name__)
 
-# %% ../nbs/00_core.ipynb 17
+# %% ../nbs/00_core.ipynb 25
 def create_dirs(run_id, user, project):
     """Create shared and local sub-directories for a run
     in the shared and local storage directories.
@@ -186,7 +211,7 @@ def create_dirs(run_id, user, project):
     local_dir.mkdir(parents=True)
     return shared_dir, local_dir
 
-# %% ../nbs/00_core.ipynb 18
+# %% ../nbs/00_core.ipynb 26
 class SyncLocalCallback:
     """Callback to sync wandb dir to local storage."""
     def __init__(self):
@@ -214,9 +239,21 @@ class SyncLocalCallback:
                 else:
                     (self.local_dir / path_object.relative_to(self.wandb_dir)).mkdir(parents=True, exist_ok=True)
             logger.info(f"copied {self.wandb_dir} to {self.local_dir}")
+            # find the wandb file
+            wandb_file_path = None
+            for fpath in self.local_dir.rglob('*'):
+                if fpath.suffix == '.wandb':
+                    wandb_file_path = fpath
+            # extract the history as a csv
+            history_csv_str = history_csv(wandb_file_path)
+            # write the csv to the same location as the wandb
+            # file but with a .csv extension
+            csv_path = wandb_file_path.with_suffix('.csv')
+            csv_path.write_text(history_csv_str)
+            logger.info(f"wrote {csv_path}")
             self.exited = True
 
-# %% ../nbs/00_core.ipynb 19
+# %% ../nbs/00_core.ipynb 27
 class SyncSharedCallback:
     """Callback to sync the shared directory with the wandb directory, contains `callback`s that it calls when called."""
     def __init__(self):
@@ -260,19 +297,19 @@ class SyncSharedCallback:
                     logger.info(f"{path_object} copied to {self.shared_dir}")
             self.exited = True
 
-# %% ../nbs/00_core.ipynb 20
+# %% ../nbs/00_core.ipynb 28
 def system_to_string(command):
     """Run system command, capture and decode the output to string."""
     if type(command) == str:
         command = command.split(' ')
     return subprocess.check_output(command).decode('utf-8')
 
-# %% ../nbs/00_core.ipynb 21
+# %% ../nbs/00_core.ipynb 29
 def git_patch_callback():
     """Callback that creates a patch for the changes in the current directory."""
     return system_to_string(['git', 'diff', 'HEAD'])
 
-# %% ../nbs/00_core.ipynb 22
+# %% ../nbs/00_core.ipynb 30
 def git_status():
     "Git status in currently directory"
     return system_to_string(['git', 'status'])
@@ -281,7 +318,7 @@ def git_branch():
     "Current branch"
     return system_to_string(["git", "rev-parse", "--abbrev-ref", "HEAD"])
 
-# %% ../nbs/00_core.ipynb 23
+# %% ../nbs/00_core.ipynb 31
 def init(**kwargs):
     """
     A wrapper for `wandb.init`. kwargs are passed to `wandb.init` with the
