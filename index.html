@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.549">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Not sacred">
+
+<title>profane</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+<meta property="og:title" content="profane">
+<meta property="og:description" content="Not sacred">
+<meta property="og:site_name" content="profane">
+<meta name="twitter:title" content="profane">
+<meta name="twitter:description" content="Not sacred">
+<meta name="twitter:card" content="summary">
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">profane</span>
+    </a>
+  </div>
+        <div class="quarto-navbar-tools">
+</div>
+          <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">profane</a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">profane</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./core.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">core</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#install" id="toc-install" class="nav-link active" data-scroll-target="#install">Install</a></li>
+  <li><a href="#how-to-use" id="toc-how-to-use" class="nav-link" data-scroll-target="#how-to-use">How to use</a></li>
+  <li><a href="#example-logged" id="toc-example-logged" class="nav-link" data-scroll-target="#example-logged">Example Logged</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/gngdb/profane/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">profane</h1>
+</div>
+
+<div>
+  <div class="description">
+    Not sacred
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<!-- WARNING: THIS FILE WAS AUTOGENERATED! DO NOT EDIT! -->
+<p>A hacky substitute for <a href="https://github.com/IDSIA/sacred">sacred</a>, logging where, when and what experiment was run. As a comparison:</p>
+<ul>
+<li><a href="https://github.com/IDSIA/sacred">sacred</a>: logs everything to MongoDB, requires integrating it into your code and using it to manage your config variables</li>
+<li><strong>profane</strong>: logs everything to a local directory, requires no integration into your code, and doesn’t care about your config variables beyond logging them</li>
+</ul>
+<p>It’s a wrapper for <a href="https://github.com/wandb/wandb">weights &amp; biases</a> so I don’t have to write my own terminal output capture solution. It just gets captured the same way it would be if I was looking at it in the <code>wandb</code> dashboard. In addition, <code>wandb</code> captures various metadata that I can just copy over, along with traces logging system metrics (which <code>profane</code> has tools to extract to <code>.csv</code>).</p>
+<p>This also means that the interface is the same as using <code>wandb</code>:</p>
+<pre><code>from profane.core import init
+
+# somewhere in your script before you start your experiment:
+run = init(
+    project='my_project'
+)</code></pre>
+<p>All kwargs are passed to <code>wandb</code> but <code>wandb</code> is run offline by default, set <code>mode='online'</code> to change this. This runs <code>wandb.init</code> internally so any future calls to <code>wandb</code> will work as expected.</p>
+<p>The difference from <code>wandb</code> is that when the run finishes the logs are copied to two locations:</p>
+<ul>
+<li><code>local</code>: a local directory where <strong>everything</strong> captured gets saved; this is a backup of the wandb directory</li>
+<li><code>shared</code>: a shared directory (I use a local git repo) where only the metadata and terminal logs get saved</li>
+</ul>
+<p>Information about every run is saved and the logs are saved, nothing is lost, and if I need to get more detail I can go look at the <code>local</code> directory and find detailed information, such as all of the code if I enable <a href="https://docs.wandb.ai/guides/app/features/panels/code"><code>settings=wandb.Settings(code_dir=".")</code></a>.</p>
+<p>Another option to do something similar would be <a href="https://man7.org/linux/man-pages/man1/script.1.html"><code>script</code></a> but it would fail logging progress bars and other things that <code>wandb</code> captures without problems. Also, it would require me to write my own solution for capturing metadata.</p>
+<section id="install" class="level2">
+<h2 class="anchored" data-anchor-id="install">Install</h2>
+<p>I haven’t put it on pypi yet so a dev install is recommended:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone git@github.com:gngdb/profane.git</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> profane</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">-e</span> .</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="how-to-use" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-use">How to use</h2>
+<p>Before using <code>profane</code>, run setup to set <code>local</code> and <code>shared</code> storage:</p>
+<div id="cell-7" class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>profane_setup <span class="op">--</span><span class="bu">help</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>usage: Set up a ~/.profanerc file and register the required directories.
+       [-h] [--user USER] local_storage shared_storage
+
+positional arguments:
+  local_storage   The local storage directory, everything will be stored here.
+  shared_storage  The shared storage directory, only the terminal logs and
+                  metadata will be stored here.
+
+options:
+  -h, --help      show this help message and exit
+  --user USER     Optional: The user name to use for the shared storage
+                  directory.</code></pre>
+</div>
+</div>
+<p>Then, as described above, <a href="https://gngdb.github.io/profane/core.html#init"><code>profane.core.init</code></a> can be used in place of <a href="https://docs.wandb.ai/ref/python/init"><code>wandb.init</code></a>, all <code>kwargs</code> are passed to <code>wandb.init</code>. The only difference is the results are saved in the directories listed above.</p>
+<p>In addition, profane kwargs may be provided prefixed by <code>profane_</code>. Currently, this includes:</p>
+<ul>
+<li><code>profane_save</code> a list of paths to plaintext files that should be saved in the shared storage</li>
+</ul>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>init(</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    config: Union[Dict, <span class="bu">str</span>, <span class="va">None</span>] <span class="op">=</span> <span class="va">None</span>,</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    project: Optional[<span class="bu">str</span>] <span class="op">=</span> <span class="va">None</span>,</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    entity: Optional[<span class="bu">str</span>] <span class="op">=</span> <span class="va">None</span>,</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    tags: Optional[Sequence] <span class="op">=</span> <span class="va">None</span>,</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    group: Optional[<span class="bu">str</span>] <span class="op">=</span> <span class="va">None</span>,</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    name: Optional[<span class="bu">str</span>] <span class="op">=</span> <span class="va">None</span>,</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    notes: Optional[<span class="bu">str</span>] <span class="op">=</span> <span class="va">None</span>,</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    profane_save: Optional[Sequence] <span class="op">=</span> <span class="va">None</span>,</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>) <span class="op">-&gt;</span> Union[Run, RunDisabled, <span class="va">None</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><code>project</code> is used to name the directory in <code>shared</code> and <code>local</code> that will store whatever is logged.</p>
+</section>
+<section id="example-logged" class="level2">
+<h2 class="anchored" data-anchor-id="example-logged">Example Logged</h2>
+<p>Example directory containing the metadata and logs from a run (the <code>shared</code> dir), logged with <code>profane</code>:</p>
+<div id="cell-11" class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>log_path <span class="op">=</span> Path(<span class="st">'./../offline-run-20230908_161004-d9b952ad'</span>)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"- "</span> <span class="op">+</span> <span class="st">"</span><span class="ch">\n</span><span class="st">- "</span>.join(p.name <span class="cf">for</span> p <span class="kw">in</span> log_path.glob(<span class="st">'*'</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>- requirements.txt
+- git.status
+- config.json
+- output.log
+- wandb-summary.json
+- argv.txt
+- conda-environment.yaml
+- system_stats.csv
+- wandb-metadata.json
+- git.patch</code></pre>
+</div>
+</div>
+<div id="cell-12" class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> Markdown, display</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> <span class="bu">file</span> <span class="kw">in</span> log_path.iterdir():</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">file</span>.is_file():</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">with</span> <span class="bu">open</span>(<span class="bu">file</span>, <span class="st">'r'</span>) <span class="im">as</span> f:</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>            contents <span class="op">=</span> f.read()</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>        display(Markdown(<span class="ss">f"### </span><span class="sc">{</span><span class="bu">file</span><span class="sc">.</span>name<span class="sc">}</span><span class="ss">"</span>))</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>        display(Markdown(<span class="ss">f"```python</span><span class="ch">\n</span><span class="sc">{</span>contents<span class="sc">}</span><span class="ch">\n</span><span class="ss">```"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="requirements.txt" class="level3 cell-output cell-output-display cell-output-markdown">
+<h3 class="anchored" data-anchor-id="requirements.txt">requirements.txt</h3>
+</section>
+<div class="cell-output cell-output-display cell-output-markdown">
+<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>absl<span class="op">-</span>py<span class="op">==</span><span class="fl">1.4.0</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>appdirs<span class="op">==</span><span class="fl">1.4.4</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>appnope<span class="op">==</span><span class="fl">0.1.3</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>asttokens<span class="op">==</span><span class="fl">2.2.1</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>attrs<span class="op">==</span><span class="fl">23.1.0</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>backcall<span class="op">==</span><span class="fl">0.2.0</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>backports.functools<span class="op">-</span>lru<span class="op">-</span>cache<span class="op">==</span><span class="fl">1.6.4</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>beautifulsoup4<span class="op">==</span><span class="fl">4.12.2</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>bleach<span class="op">==</span><span class="fl">6.0.0</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>brotlipy<span class="op">==</span><span class="fl">0.7.0</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>cachetools<span class="op">==</span><span class="fl">5.3.1</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>certifi<span class="op">==</span><span class="fl">2023.5.7</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>cffi<span class="op">==</span><span class="fl">1.15.1</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>charset<span class="op">-</span>normalizer<span class="op">==</span><span class="fl">2.0.4</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>click<span class="op">==</span><span class="fl">8.1.3</span></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>contourpy<span class="op">==</span><span class="fl">1.0.5</span></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>cryptography<span class="op">==</span><span class="fl">39.0.1</span></span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>cycler<span class="op">==</span><span class="fl">0.11.0</span></span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>dahuffman<span class="op">==</span><span class="fl">0.4.1</span></span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>debugpy<span class="op">==</span><span class="fl">1.5.1</span></span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>decorator<span class="op">==</span><span class="fl">5.1.1</span></span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>defusedxml<span class="op">==</span><span class="fl">0.7.1</span></span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>dill<span class="op">==</span><span class="fl">0.3.6</span></span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>docker<span class="op">-</span>pycreds<span class="op">==</span><span class="fl">0.4.0</span></span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>einops<span class="op">==</span><span class="fl">0.6.1</span></span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>executing<span class="op">==</span><span class="fl">1.2.0</span></span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a>fastjsonschema<span class="op">==</span><span class="fl">2.18.0</span></span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a>filelock<span class="op">==</span><span class="fl">3.9.0</span></span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a>fonttools<span class="op">==</span><span class="fl">4.25.0</span></span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a>fsspec<span class="op">==</span><span class="fl">2023.6.0</span></span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a>gitdb<span class="op">==</span><span class="fl">4.0.10</span></span>
+<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a>gitpython<span class="op">==</span><span class="fl">3.1.31</span></span>
+<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a>gmpy2<span class="op">==</span><span class="fl">2.1.2</span></span>
+<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a>google<span class="op">-</span>auth<span class="op">-</span>oauthlib<span class="op">==</span><span class="fl">1.0.0</span></span>
+<span id="cb9-35"><a href="#cb9-35" aria-hidden="true" tabindex="-1"></a>google<span class="op">-</span>auth<span class="op">==</span><span class="fl">2.21.0</span></span>
+<span id="cb9-36"><a href="#cb9-36" aria-hidden="true" tabindex="-1"></a>grpcio<span class="op">==</span><span class="fl">1.56.0</span></span>
+<span id="cb9-37"><a href="#cb9-37" aria-hidden="true" tabindex="-1"></a>hjson<span class="op">==</span><span class="fl">3.1.0</span></span>
+<span id="cb9-38"><a href="#cb9-38" aria-hidden="true" tabindex="-1"></a>idna<span class="op">==</span><span class="fl">3.4</span></span>
+<span id="cb9-39"><a href="#cb9-39" aria-hidden="true" tabindex="-1"></a>importlib<span class="op">-</span>metadata<span class="op">==</span><span class="fl">6.6.0</span></span>
+<span id="cb9-40"><a href="#cb9-40" aria-hidden="true" tabindex="-1"></a>ipykernel<span class="op">==</span><span class="fl">6.15.0</span></span>
+<span id="cb9-41"><a href="#cb9-41" aria-hidden="true" tabindex="-1"></a>ipython<span class="op">==</span><span class="fl">8.14.0</span></span>
+<span id="cb9-42"><a href="#cb9-42" aria-hidden="true" tabindex="-1"></a>jedi<span class="op">==</span><span class="fl">0.18.2</span></span>
+<span id="cb9-43"><a href="#cb9-43" aria-hidden="true" tabindex="-1"></a>jinja2<span class="op">==</span><span class="fl">3.1.2</span></span>
+<span id="cb9-44"><a href="#cb9-44" aria-hidden="true" tabindex="-1"></a>jsonschema<span class="op">-</span>specifications<span class="op">==</span><span class="fl">2023.7.1</span></span>
+<span id="cb9-45"><a href="#cb9-45" aria-hidden="true" tabindex="-1"></a>jsonschema<span class="op">==</span><span class="fl">4.19.0</span></span>
+<span id="cb9-46"><a href="#cb9-46" aria-hidden="true" tabindex="-1"></a>jupyter<span class="op">-</span>client<span class="op">==</span><span class="fl">8.2.0</span></span>
+<span id="cb9-47"><a href="#cb9-47" aria-hidden="true" tabindex="-1"></a>jupyter<span class="op">-</span>core<span class="op">==</span><span class="fl">5.3.0</span></span>
+<span id="cb9-48"><a href="#cb9-48" aria-hidden="true" tabindex="-1"></a>jupyterlab<span class="op">-</span>pygments<span class="op">==</span><span class="fl">0.2.2</span></span>
+<span id="cb9-49"><a href="#cb9-49" aria-hidden="true" tabindex="-1"></a>kiwisolver<span class="op">==</span><span class="fl">1.4.4</span></span>
+<span id="cb9-50"><a href="#cb9-50" aria-hidden="true" tabindex="-1"></a>markdown<span class="op">==</span><span class="fl">3.4.3</span></span>
+<span id="cb9-51"><a href="#cb9-51" aria-hidden="true" tabindex="-1"></a>markupsafe<span class="op">==</span><span class="fl">2.1.3</span></span>
+<span id="cb9-52"><a href="#cb9-52" aria-hidden="true" tabindex="-1"></a>matplotlib<span class="op">-</span>inline<span class="op">==</span><span class="fl">0.1.6</span></span>
+<span id="cb9-53"><a href="#cb9-53" aria-hidden="true" tabindex="-1"></a>matplotlib<span class="op">==</span><span class="fl">3.7.1</span></span>
+<span id="cb9-54"><a href="#cb9-54" aria-hidden="true" tabindex="-1"></a>mistune<span class="op">==</span><span class="fl">3.0.1</span></span>
+<span id="cb9-55"><a href="#cb9-55" aria-hidden="true" tabindex="-1"></a>mpmath<span class="op">==</span><span class="fl">1.2.1</span></span>
+<span id="cb9-56"><a href="#cb9-56" aria-hidden="true" tabindex="-1"></a>munkres<span class="op">==</span><span class="fl">1.1.4</span></span>
+<span id="cb9-57"><a href="#cb9-57" aria-hidden="true" tabindex="-1"></a>mypy<span class="op">-</span>extensions<span class="op">==</span><span class="fl">1.0.0</span></span>
+<span id="cb9-58"><a href="#cb9-58" aria-hidden="true" tabindex="-1"></a>nbclient<span class="op">==</span><span class="fl">0.8.0</span></span>
+<span id="cb9-59"><a href="#cb9-59" aria-hidden="true" tabindex="-1"></a>nbconvert<span class="op">==</span><span class="fl">7.7.4</span></span>
+<span id="cb9-60"><a href="#cb9-60" aria-hidden="true" tabindex="-1"></a>nbformat<span class="op">==</span><span class="fl">5.9.2</span></span>
+<span id="cb9-61"><a href="#cb9-61" aria-hidden="true" tabindex="-1"></a>nest<span class="op">-</span>asyncio<span class="op">==</span><span class="fl">1.5.6</span></span>
+<span id="cb9-62"><a href="#cb9-62" aria-hidden="true" tabindex="-1"></a>networkx<span class="op">==</span><span class="fl">2.8.4</span></span>
+<span id="cb9-63"><a href="#cb9-63" aria-hidden="true" tabindex="-1"></a>ninja<span class="op">==</span><span class="fl">1.11.1</span></span>
+<span id="cb9-64"><a href="#cb9-64" aria-hidden="true" tabindex="-1"></a>numpy<span class="op">==</span><span class="fl">1.24.3</span></span>
+<span id="cb9-65"><a href="#cb9-65" aria-hidden="true" tabindex="-1"></a>oauthlib<span class="op">==</span><span class="fl">3.2.2</span></span>
+<span id="cb9-66"><a href="#cb9-66" aria-hidden="true" tabindex="-1"></a>opt<span class="op">-</span>einsum<span class="op">==</span><span class="fl">3.3.0</span></span>
+<span id="cb9-67"><a href="#cb9-67" aria-hidden="true" tabindex="-1"></a>packaging<span class="op">==</span><span class="fl">23.1</span></span>
+<span id="cb9-68"><a href="#cb9-68" aria-hidden="true" tabindex="-1"></a>pandas<span class="op">==</span><span class="fl">2.0.3</span></span>
+<span id="cb9-69"><a href="#cb9-69" aria-hidden="true" tabindex="-1"></a>pandocfilters<span class="op">==</span><span class="fl">1.5.0</span></span>
+<span id="cb9-70"><a href="#cb9-70" aria-hidden="true" tabindex="-1"></a>parso<span class="op">==</span><span class="fl">0.8.3</span></span>
+<span id="cb9-71"><a href="#cb9-71" aria-hidden="true" tabindex="-1"></a>pathtools<span class="op">==</span><span class="fl">0.1.2</span></span>
+<span id="cb9-72"><a href="#cb9-72" aria-hidden="true" tabindex="-1"></a>pexpect<span class="op">==</span><span class="fl">4.8.0</span></span>
+<span id="cb9-73"><a href="#cb9-73" aria-hidden="true" tabindex="-1"></a>pickleshare<span class="op">==</span><span class="fl">0.7.5</span></span>
+<span id="cb9-74"><a href="#cb9-74" aria-hidden="true" tabindex="-1"></a>pillow<span class="op">==</span><span class="fl">9.4.0</span></span>
+<span id="cb9-75"><a href="#cb9-75" aria-hidden="true" tabindex="-1"></a>pip<span class="op">==</span><span class="fl">23.0.1</span></span>
+<span id="cb9-76"><a href="#cb9-76" aria-hidden="true" tabindex="-1"></a>platformdirs<span class="op">==</span><span class="fl">2.5.2</span></span>
+<span id="cb9-77"><a href="#cb9-77" aria-hidden="true" tabindex="-1"></a>profane<span class="op">==</span><span class="fl">0.0.1</span></span>
+<span id="cb9-78"><a href="#cb9-78" aria-hidden="true" tabindex="-1"></a>prompt<span class="op">-</span>toolkit<span class="op">==</span><span class="fl">3.0.38</span></span>
+<span id="cb9-79"><a href="#cb9-79" aria-hidden="true" tabindex="-1"></a>protobuf<span class="op">==</span><span class="fl">4.22.3</span></span>
+<span id="cb9-80"><a href="#cb9-80" aria-hidden="true" tabindex="-1"></a>psutil<span class="op">==</span><span class="fl">5.9.0</span></span>
+<span id="cb9-81"><a href="#cb9-81" aria-hidden="true" tabindex="-1"></a>ptyprocess<span class="op">==</span><span class="fl">0.7.0</span></span>
+<span id="cb9-82"><a href="#cb9-82" aria-hidden="true" tabindex="-1"></a>pure<span class="op">-</span><span class="bu">eval</span><span class="op">==</span><span class="fl">0.2.2</span></span>
+<span id="cb9-83"><a href="#cb9-83" aria-hidden="true" tabindex="-1"></a>py<span class="op">-</span>cpuinfo<span class="op">==</span><span class="fl">9.0.0</span></span>
+<span id="cb9-84"><a href="#cb9-84" aria-hidden="true" tabindex="-1"></a>pyasn1<span class="op">-</span>modules<span class="op">==</span><span class="fl">0.3.0</span></span>
+<span id="cb9-85"><a href="#cb9-85" aria-hidden="true" tabindex="-1"></a>pyasn1<span class="op">==</span><span class="fl">0.5.0</span></span>
+<span id="cb9-86"><a href="#cb9-86" aria-hidden="true" tabindex="-1"></a>pycparser<span class="op">==</span><span class="fl">2.21</span></span>
+<span id="cb9-87"><a href="#cb9-87" aria-hidden="true" tabindex="-1"></a>pydantic<span class="op">==</span><span class="fl">1.10.9</span></span>
+<span id="cb9-88"><a href="#cb9-88" aria-hidden="true" tabindex="-1"></a>pygments<span class="op">==</span><span class="fl">2.15.1</span></span>
+<span id="cb9-89"><a href="#cb9-89" aria-hidden="true" tabindex="-1"></a>pyopenssl<span class="op">==</span><span class="fl">23.0.0</span></span>
+<span id="cb9-90"><a href="#cb9-90" aria-hidden="true" tabindex="-1"></a>pyparsing<span class="op">==</span><span class="fl">3.0.9</span></span>
+<span id="cb9-91"><a href="#cb9-91" aria-hidden="true" tabindex="-1"></a>pyre<span class="op">-</span>extensions<span class="op">==</span><span class="fl">0.0.30</span></span>
+<span id="cb9-92"><a href="#cb9-92" aria-hidden="true" tabindex="-1"></a>pysocks<span class="op">==</span><span class="fl">1.7.1</span></span>
+<span id="cb9-93"><a href="#cb9-93" aria-hidden="true" tabindex="-1"></a>python<span class="op">-</span>dateutil<span class="op">==</span><span class="fl">2.8.2</span></span>
+<span id="cb9-94"><a href="#cb9-94" aria-hidden="true" tabindex="-1"></a>pytz<span class="op">==</span><span class="fl">2023.3</span></span>
+<span id="cb9-95"><a href="#cb9-95" aria-hidden="true" tabindex="-1"></a>pyyaml<span class="op">==</span><span class="fl">6.0</span></span>
+<span id="cb9-96"><a href="#cb9-96" aria-hidden="true" tabindex="-1"></a>pyzmq<span class="op">==</span><span class="fl">25.1.0</span></span>
+<span id="cb9-97"><a href="#cb9-97" aria-hidden="true" tabindex="-1"></a>referencing<span class="op">==</span><span class="fl">0.30.2</span></span>
+<span id="cb9-98"><a href="#cb9-98" aria-hidden="true" tabindex="-1"></a>requests<span class="op">-</span>oauthlib<span class="op">==</span><span class="fl">1.3.1</span></span>
+<span id="cb9-99"><a href="#cb9-99" aria-hidden="true" tabindex="-1"></a>requests<span class="op">==</span><span class="fl">2.29.0</span></span>
+<span id="cb9-100"><a href="#cb9-100" aria-hidden="true" tabindex="-1"></a>rpds<span class="op">-</span>py<span class="op">==</span><span class="fl">0.9.2</span></span>
+<span id="cb9-101"><a href="#cb9-101" aria-hidden="true" tabindex="-1"></a>rsa<span class="op">==</span><span class="fl">4.9</span></span>
+<span id="cb9-102"><a href="#cb9-102" aria-hidden="true" tabindex="-1"></a>seaborn<span class="op">==</span><span class="fl">0.12.2</span></span>
+<span id="cb9-103"><a href="#cb9-103" aria-hidden="true" tabindex="-1"></a>sentry<span class="op">-</span>sdk<span class="op">==</span><span class="fl">1.21.1</span></span>
+<span id="cb9-104"><a href="#cb9-104" aria-hidden="true" tabindex="-1"></a>setproctitle<span class="op">==</span><span class="fl">1.3.2</span></span>
+<span id="cb9-105"><a href="#cb9-105" aria-hidden="true" tabindex="-1"></a>setuptools<span class="op">==</span><span class="fl">66.0.0</span></span>
+<span id="cb9-106"><a href="#cb9-106" aria-hidden="true" tabindex="-1"></a>six<span class="op">==</span><span class="fl">1.16.0</span></span>
+<span id="cb9-107"><a href="#cb9-107" aria-hidden="true" tabindex="-1"></a>smmap<span class="op">==</span><span class="fl">5.0.0</span></span>
+<span id="cb9-108"><a href="#cb9-108" aria-hidden="true" tabindex="-1"></a>soupsieve<span class="op">==</span><span class="fl">2.4.1</span></span>
+<span id="cb9-109"><a href="#cb9-109" aria-hidden="true" tabindex="-1"></a>stack<span class="op">-</span>data<span class="op">==</span><span class="fl">0.6.2</span></span>
+<span id="cb9-110"><a href="#cb9-110" aria-hidden="true" tabindex="-1"></a>sympy<span class="op">==</span><span class="fl">1.11.1</span></span>
+<span id="cb9-111"><a href="#cb9-111" aria-hidden="true" tabindex="-1"></a>tensorboard<span class="op">-</span>data<span class="op">-</span>server<span class="op">==</span><span class="fl">0.7.1</span></span>
+<span id="cb9-112"><a href="#cb9-112" aria-hidden="true" tabindex="-1"></a>tensorboard<span class="op">==</span><span class="fl">2.13.0</span></span>
+<span id="cb9-113"><a href="#cb9-113" aria-hidden="true" tabindex="-1"></a>tinycss2<span class="op">==</span><span class="fl">1.2.1</span></span>
+<span id="cb9-114"><a href="#cb9-114" aria-hidden="true" tabindex="-1"></a>torch<span class="op">==</span><span class="fl">2.1.0</span>.dev20230428</span>
+<span id="cb9-115"><a href="#cb9-115" aria-hidden="true" tabindex="-1"></a>torchaudio<span class="op">==</span><span class="fl">2.1.0</span>.dev20230428</span>
+<span id="cb9-116"><a href="#cb9-116" aria-hidden="true" tabindex="-1"></a>torcheval<span class="op">==</span><span class="fl">0.0.6</span></span>
+<span id="cb9-117"><a href="#cb9-117" aria-hidden="true" tabindex="-1"></a>torchtnt<span class="op">==</span><span class="fl">0.1.0</span></span>
+<span id="cb9-118"><a href="#cb9-118" aria-hidden="true" tabindex="-1"></a>torchvision<span class="op">==</span><span class="fl">0.16.0</span>.dev20230428</span>
+<span id="cb9-119"><a href="#cb9-119" aria-hidden="true" tabindex="-1"></a>tornado<span class="op">==</span><span class="fl">6.2</span></span>
+<span id="cb9-120"><a href="#cb9-120" aria-hidden="true" tabindex="-1"></a>tqdm<span class="op">==</span><span class="fl">4.65.0</span></span>
+<span id="cb9-121"><a href="#cb9-121" aria-hidden="true" tabindex="-1"></a>traitlets<span class="op">==</span><span class="fl">5.9.0</span></span>
+<span id="cb9-122"><a href="#cb9-122" aria-hidden="true" tabindex="-1"></a>typing<span class="op">-</span>extensions<span class="op">==</span><span class="fl">4.5.0</span></span>
+<span id="cb9-123"><a href="#cb9-123" aria-hidden="true" tabindex="-1"></a>typing<span class="op">-</span>inspect<span class="op">==</span><span class="fl">0.9.0</span></span>
+<span id="cb9-124"><a href="#cb9-124" aria-hidden="true" tabindex="-1"></a>tzdata<span class="op">==</span><span class="fl">2023.3</span></span>
+<span id="cb9-125"><a href="#cb9-125" aria-hidden="true" tabindex="-1"></a>urllib3<span class="op">==</span><span class="fl">1.26.15</span></span>
+<span id="cb9-126"><a href="#cb9-126" aria-hidden="true" tabindex="-1"></a>wandb<span class="op">==</span><span class="fl">0.15.7</span></span>
+<span id="cb9-127"><a href="#cb9-127" aria-hidden="true" tabindex="-1"></a>wcwidth<span class="op">==</span><span class="fl">0.2.6</span></span>
+<span id="cb9-128"><a href="#cb9-128" aria-hidden="true" tabindex="-1"></a>webencodings<span class="op">==</span><span class="fl">0.5.1</span></span>
+<span id="cb9-129"><a href="#cb9-129" aria-hidden="true" tabindex="-1"></a>werkzeug<span class="op">==</span><span class="fl">2.3.6</span></span>
+<span id="cb9-130"><a href="#cb9-130" aria-hidden="true" tabindex="-1"></a>wheel<span class="op">==</span><span class="fl">0.38.4</span></span>
+<span id="cb9-131"><a href="#cb9-131" aria-hidden="true" tabindex="-1"></a>x<span class="op">-</span>transformers<span class="op">==</span><span class="fl">1.16.9</span></span>
+<span id="cb9-132"><a href="#cb9-132" aria-hidden="true" tabindex="-1"></a>zipp<span class="op">==</span><span class="fl">3.15.0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="git.status" class="level3 cell-output cell-output-display cell-output-markdown">
+<h3 class="anchored" data-anchor-id="git.status">git.status</h3>
+</section>
+<div class="cell-output cell-output-display cell-output-markdown">
+<div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>On branch main</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>Your branch <span class="kw">is</span> up to date <span class="cf">with</span> <span class="st">'origin/main'</span>.</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>Changes <span class="kw">not</span> staged <span class="cf">for</span> commit:</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  (use <span class="st">"git add &lt;file&gt;..."</span> to update what will be committed)</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  (use <span class="st">"git restore &lt;file&gt;..."</span> to discard changes <span class="kw">in</span> working directory)</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    modified:   main.py</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>Untracked files:</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>  (use <span class="st">"git add &lt;file&gt;..."</span> to include <span class="kw">in</span> what will be committed)</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>    wandb<span class="op">/</span></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>no changes added to commit (use <span class="st">"git add"</span> <span class="kw">and</span><span class="op">/</span><span class="kw">or</span> <span class="st">"git commit -a"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="config.json" class="level3 cell-output cell-output-display cell-output-markdown">
+<h3 class="anchored" data-anchor-id="config.json">config.json</h3>
+</section>
+<div class="cell-output cell-output-display cell-output-markdown">
+<div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"batch_size"</span>: <span class="dv">64</span>,</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"dry_run"</span>: false,</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"epochs"</span>: <span class="dv">14</span>,</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"gamma"</span>: <span class="fl">0.7</span>,</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"log_interval"</span>: <span class="dv">10</span>,</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"lr"</span>: <span class="fl">1.0</span>,</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"no_cuda"</span>: false,</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"no_mps"</span>: false,</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">"save_model"</span>: false,</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">"seed"</span>: <span class="dv">1</span>,</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">"test_batch_size"</span>: <span class="dv">1000</span></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="output.log" class="level3 cell-output cell-output-display cell-output-markdown">
+<h3 class="anchored" data-anchor-id="output.log">output.log</h3>
+</section>
+<div class="cell-output cell-output-display cell-output-markdown">
+<div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">0</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">0</span><span class="op">%</span>)]   Loss: <span class="fl">2.300024</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">640</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">1</span><span class="op">%</span>)] Loss: <span class="fl">1.141236</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">1280</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">2</span><span class="op">%</span>)]    Loss: <span class="fl">0.711558</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">1920</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">3</span><span class="op">%</span>)]    Loss: <span class="fl">0.534700</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">2560</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">4</span><span class="op">%</span>)]    Loss: <span class="fl">0.394732</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">3200</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">5</span><span class="op">%</span>)]    Loss: <span class="fl">0.266415</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">3840</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">6</span><span class="op">%</span>)]    Loss: <span class="fl">0.233061</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">4480</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">7</span><span class="op">%</span>)]    Loss: <span class="fl">0.214440</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">5120</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">9</span><span class="op">%</span>)]    Loss: <span class="fl">0.619316</span></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">5760</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">10</span><span class="op">%</span>)]   Loss: <span class="fl">0.206452</span></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">6400</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">11</span><span class="op">%</span>)]   Loss: <span class="fl">0.418914</span></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">7040</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">12</span><span class="op">%</span>)]   Loss: <span class="fl">0.228332</span></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">7680</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">13</span><span class="op">%</span>)]   Loss: <span class="fl">0.176347</span></span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">8320</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">14</span><span class="op">%</span>)]   Loss: <span class="fl">0.153546</span></span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">8960</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">15</span><span class="op">%</span>)]   Loss: <span class="fl">0.230625</span></span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">9600</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">16</span><span class="op">%</span>)]   Loss: <span class="fl">0.181143</span></span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">10240</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">17</span><span class="op">%</span>)]  Loss: <span class="fl">0.361177</span></span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">10880</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">18</span><span class="op">%</span>)]  Loss: <span class="fl">0.189232</span></span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">11520</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">19</span><span class="op">%</span>)]  Loss: <span class="fl">0.392473</span></span>
+<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">12160</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">20</span><span class="op">%</span>)]  Loss: <span class="fl">0.177749</span></span>
+<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">12800</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">21</span><span class="op">%</span>)]  Loss: <span class="fl">0.197366</span></span>
+<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">13440</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">22</span><span class="op">%</span>)]  Loss: <span class="fl">0.145951</span></span>
+<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">14080</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">23</span><span class="op">%</span>)]  Loss: <span class="fl">0.208425</span></span>
+<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">14720</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">25</span><span class="op">%</span>)]  Loss: <span class="fl">0.462393</span></span>
+<span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">15360</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">26</span><span class="op">%</span>)]  Loss: <span class="fl">0.154787</span></span>
+<span id="cb12-26"><a href="#cb12-26" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">16000</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">27</span><span class="op">%</span>)]  Loss: <span class="fl">0.223398</span></span>
+<span id="cb12-27"><a href="#cb12-27" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">16640</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">28</span><span class="op">%</span>)]  Loss: <span class="fl">0.088585</span></span>
+<span id="cb12-28"><a href="#cb12-28" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">17280</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">29</span><span class="op">%</span>)]  Loss: <span class="fl">0.105454</span></span>
+<span id="cb12-29"><a href="#cb12-29" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">17920</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">30</span><span class="op">%</span>)]  Loss: <span class="fl">0.161331</span></span>
+<span id="cb12-30"><a href="#cb12-30" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">18560</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">31</span><span class="op">%</span>)]  Loss: <span class="fl">0.302365</span></span>
+<span id="cb12-31"><a href="#cb12-31" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">19200</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">32</span><span class="op">%</span>)]  Loss: <span class="fl">0.151357</span></span>
+<span id="cb12-32"><a href="#cb12-32" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">19840</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">33</span><span class="op">%</span>)]  Loss: <span class="fl">0.180794</span></span>
+<span id="cb12-33"><a href="#cb12-33" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">20480</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">34</span><span class="op">%</span>)]  Loss: <span class="fl">0.029116</span></span>
+<span id="cb12-34"><a href="#cb12-34" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">21120</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">35</span><span class="op">%</span>)]  Loss: <span class="fl">0.204436</span></span>
+<span id="cb12-35"><a href="#cb12-35" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">21760</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">36</span><span class="op">%</span>)]  Loss: <span class="fl">0.048799</span></span>
+<span id="cb12-36"><a href="#cb12-36" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">22400</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">37</span><span class="op">%</span>)]  Loss: <span class="fl">0.123405</span></span>
+<span id="cb12-37"><a href="#cb12-37" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">23040</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">38</span><span class="op">%</span>)]  Loss: <span class="fl">0.158138</span></span>
+<span id="cb12-38"><a href="#cb12-38" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">23680</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">39</span><span class="op">%</span>)]  Loss: <span class="fl">0.224575</span></span>
+<span id="cb12-39"><a href="#cb12-39" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">24320</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">41</span><span class="op">%</span>)]  Loss: <span class="fl">0.062561</span></span>
+<span id="cb12-40"><a href="#cb12-40" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">24960</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">42</span><span class="op">%</span>)]  Loss: <span class="fl">0.106391</span></span>
+<span id="cb12-41"><a href="#cb12-41" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">25600</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">43</span><span class="op">%</span>)]  Loss: <span class="fl">0.162630</span></span>
+<span id="cb12-42"><a href="#cb12-42" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">26240</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">44</span><span class="op">%</span>)]  Loss: <span class="fl">0.120360</span></span>
+<span id="cb12-43"><a href="#cb12-43" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">26880</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">45</span><span class="op">%</span>)]  Loss: <span class="fl">0.299113</span></span>
+<span id="cb12-44"><a href="#cb12-44" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">27520</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">46</span><span class="op">%</span>)]  Loss: <span class="fl">0.204707</span></span>
+<span id="cb12-45"><a href="#cb12-45" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">28160</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">47</span><span class="op">%</span>)]  Loss: <span class="fl">0.064838</span></span>
+<span id="cb12-46"><a href="#cb12-46" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">28800</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">48</span><span class="op">%</span>)]  Loss: <span class="fl">0.084399</span></span>
+<span id="cb12-47"><a href="#cb12-47" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">29440</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">49</span><span class="op">%</span>)]  Loss: <span class="fl">0.068435</span></span>
+<span id="cb12-48"><a href="#cb12-48" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">30080</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">50</span><span class="op">%</span>)]  Loss: <span class="fl">0.054200</span></span>
+<span id="cb12-49"><a href="#cb12-49" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">30720</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">51</span><span class="op">%</span>)]  Loss: <span class="fl">0.083719</span></span>
+<span id="cb12-50"><a href="#cb12-50" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">31360</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">52</span><span class="op">%</span>)]  Loss: <span class="fl">0.057806</span></span>
+<span id="cb12-51"><a href="#cb12-51" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">32000</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">53</span><span class="op">%</span>)]  Loss: <span class="fl">0.168371</span></span>
+<span id="cb12-52"><a href="#cb12-52" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">32640</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">54</span><span class="op">%</span>)]  Loss: <span class="fl">0.103747</span></span>
+<span id="cb12-53"><a href="#cb12-53" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">33280</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">55</span><span class="op">%</span>)]  Loss: <span class="fl">0.143636</span></span>
+<span id="cb12-54"><a href="#cb12-54" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">33920</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">57</span><span class="op">%</span>)]  Loss: <span class="fl">0.073810</span></span>
+<span id="cb12-55"><a href="#cb12-55" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">34560</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">58</span><span class="op">%</span>)]  Loss: <span class="fl">0.071079</span></span>
+<span id="cb12-56"><a href="#cb12-56" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">35200</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">59</span><span class="op">%</span>)]  Loss: <span class="fl">0.096664</span></span>
+<span id="cb12-57"><a href="#cb12-57" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">35840</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">60</span><span class="op">%</span>)]  Loss: <span class="fl">0.180809</span></span>
+<span id="cb12-58"><a href="#cb12-58" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">36480</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">61</span><span class="op">%</span>)]  Loss: <span class="fl">0.078782</span></span>
+<span id="cb12-59"><a href="#cb12-59" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">37120</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">62</span><span class="op">%</span>)]  Loss: <span class="fl">0.085670</span></span>
+<span id="cb12-60"><a href="#cb12-60" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">37760</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">63</span><span class="op">%</span>)]  Loss: <span class="fl">0.237285</span></span>
+<span id="cb12-61"><a href="#cb12-61" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">38400</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">64</span><span class="op">%</span>)]  Loss: <span class="fl">0.171452</span></span>
+<span id="cb12-62"><a href="#cb12-62" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">39040</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">65</span><span class="op">%</span>)]  Loss: <span class="fl">0.016421</span></span>
+<span id="cb12-63"><a href="#cb12-63" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">39680</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">66</span><span class="op">%</span>)]  Loss: <span class="fl">0.039804</span></span>
+<span id="cb12-64"><a href="#cb12-64" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">40320</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">67</span><span class="op">%</span>)]  Loss: <span class="fl">0.123339</span></span>
+<span id="cb12-65"><a href="#cb12-65" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">40960</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">68</span><span class="op">%</span>)]  Loss: <span class="fl">0.179846</span></span>
+<span id="cb12-66"><a href="#cb12-66" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">41600</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">69</span><span class="op">%</span>)]  Loss: <span class="fl">0.050442</span></span>
+<span id="cb12-67"><a href="#cb12-67" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">42240</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">70</span><span class="op">%</span>)]  Loss: <span class="fl">0.017428</span></span>
+<span id="cb12-68"><a href="#cb12-68" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">42880</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">71</span><span class="op">%</span>)]  Loss: <span class="fl">0.173062</span></span>
+<span id="cb12-69"><a href="#cb12-69" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">43520</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">72</span><span class="op">%</span>)]  Loss: <span class="fl">0.182993</span></span>
+<span id="cb12-70"><a href="#cb12-70" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">44160</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">74</span><span class="op">%</span>)]  Loss: <span class="fl">0.013076</span></span>
+<span id="cb12-71"><a href="#cb12-71" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">44800</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">75</span><span class="op">%</span>)]  Loss: <span class="fl">0.178473</span></span>
+<span id="cb12-72"><a href="#cb12-72" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">45440</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">76</span><span class="op">%</span>)]  Loss: <span class="fl">0.167469</span></span>
+<span id="cb12-73"><a href="#cb12-73" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">46080</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">77</span><span class="op">%</span>)]  Loss: <span class="fl">0.169292</span></span>
+<span id="cb12-74"><a href="#cb12-74" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">46720</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">78</span><span class="op">%</span>)]  Loss: <span class="fl">0.224109</span></span>
+<span id="cb12-75"><a href="#cb12-75" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">47360</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">79</span><span class="op">%</span>)]  Loss: <span class="fl">0.088818</span></span>
+<span id="cb12-76"><a href="#cb12-76" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">48000</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">80</span><span class="op">%</span>)]  Loss: <span class="fl">0.144786</span></span>
+<span id="cb12-77"><a href="#cb12-77" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">48640</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">81</span><span class="op">%</span>)]  Loss: <span class="fl">0.038873</span></span>
+<span id="cb12-78"><a href="#cb12-78" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">49280</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">82</span><span class="op">%</span>)]  Loss: <span class="fl">0.030595</span></span>
+<span id="cb12-79"><a href="#cb12-79" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">49920</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">83</span><span class="op">%</span>)]  Loss: <span class="fl">0.070011</span></span>
+<span id="cb12-80"><a href="#cb12-80" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">50560</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">84</span><span class="op">%</span>)]  Loss: <span class="fl">0.124998</span></span>
+<span id="cb12-81"><a href="#cb12-81" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">51200</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">85</span><span class="op">%</span>)]  Loss: <span class="fl">0.224721</span></span>
+<span id="cb12-82"><a href="#cb12-82" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">51840</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">86</span><span class="op">%</span>)]  Loss: <span class="fl">0.066481</span></span>
+<span id="cb12-83"><a href="#cb12-83" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">52480</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">87</span><span class="op">%</span>)]  Loss: <span class="fl">0.028962</span></span>
+<span id="cb12-84"><a href="#cb12-84" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">53120</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">88</span><span class="op">%</span>)]  Loss: <span class="fl">0.203254</span></span>
+<span id="cb12-85"><a href="#cb12-85" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">53760</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">90</span><span class="op">%</span>)]  Loss: <span class="fl">0.151286</span></span>
+<span id="cb12-86"><a href="#cb12-86" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">54400</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">91</span><span class="op">%</span>)]  Loss: <span class="fl">0.035127</span></span>
+<span id="cb12-87"><a href="#cb12-87" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">55040</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">92</span><span class="op">%</span>)]  Loss: <span class="fl">0.032851</span></span>
+<span id="cb12-88"><a href="#cb12-88" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">55680</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">93</span><span class="op">%</span>)]  Loss: <span class="fl">0.188284</span></span>
+<span id="cb12-89"><a href="#cb12-89" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">56320</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">94</span><span class="op">%</span>)]  Loss: <span class="fl">0.036238</span></span>
+<span id="cb12-90"><a href="#cb12-90" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">56960</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">95</span><span class="op">%</span>)]  Loss: <span class="fl">0.046339</span></span>
+<span id="cb12-91"><a href="#cb12-91" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">57600</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">96</span><span class="op">%</span>)]  Loss: <span class="fl">0.106009</span></span>
+<span id="cb12-92"><a href="#cb12-92" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">58240</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">97</span><span class="op">%</span>)]  Loss: <span class="fl">0.072917</span></span>
+<span id="cb12-93"><a href="#cb12-93" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">58880</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">98</span><span class="op">%</span>)]  Loss: <span class="fl">0.001254</span></span>
+<span id="cb12-94"><a href="#cb12-94" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">1</span> [<span class="dv">59520</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">99</span><span class="op">%</span>)]  Loss: <span class="fl">0.013900</span></span>
+<span id="cb12-95"><a href="#cb12-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-96"><a href="#cb12-96" aria-hidden="true" tabindex="-1"></a>Test <span class="bu">set</span>: Average loss: <span class="fl">0.0484</span>, Accuracy: <span class="dv">9838</span><span class="op">/</span><span class="dv">10000</span> (<span class="dv">98</span><span class="op">%</span>)</span>
+<span id="cb12-97"><a href="#cb12-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-98"><a href="#cb12-98" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">2</span> [<span class="dv">0</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">0</span><span class="op">%</span>)]   Loss: <span class="fl">0.060924</span></span>
+<span id="cb12-99"><a href="#cb12-99" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">2</span> [<span class="dv">640</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">1</span><span class="op">%</span>)] Loss: <span class="fl">0.057691</span></span>
+<span id="cb12-100"><a href="#cb12-100" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">2</span> [<span class="dv">1280</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">2</span><span class="op">%</span>)]    Loss: <span class="fl">0.056489</span></span>
+<span id="cb12-101"><a href="#cb12-101" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">2</span> [<span class="dv">1920</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">3</span><span class="op">%</span>)]    Loss: <span class="fl">0.083914</span></span>
+<span id="cb12-102"><a href="#cb12-102" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">2</span> [<span class="dv">2560</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">4</span><span class="op">%</span>)]    Loss: <span class="fl">0.086739</span></span>
+<span id="cb12-103"><a href="#cb12-103" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">2</span> [<span class="dv">3200</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">5</span><span class="op">%</span>)]    Loss: <span class="fl">0.029744</span></span>
+<span id="cb12-104"><a href="#cb12-104" aria-hidden="true" tabindex="-1"></a>Train Epoch: <span class="dv">2</span> [<span class="dv">3840</span><span class="op">/</span><span class="dv">60000</span> (<span class="dv">6</span><span class="op">%</span>)]    Loss: <span class="fl">0.035730</span></span>
+<span id="cb12-105"><a href="#cb12-105" aria-hidden="true" tabindex="-1"></a>Traceback (most recent call last):</span>
+<span id="cb12-106"><a href="#cb12-106" aria-hidden="true" tabindex="-1"></a>  File <span class="st">"/Users/gngdb/ws/pytorch_examples/mnist/main.py"</span>, line <span class="dv">149</span>, <span class="kw">in</span> <span class="op">&lt;</span>module<span class="op">&gt;</span></span>
+<span id="cb12-107"><a href="#cb12-107" aria-hidden="true" tabindex="-1"></a>    main()</span>
+<span id="cb12-108"><a href="#cb12-108" aria-hidden="true" tabindex="-1"></a>  File <span class="st">"/Users/gngdb/ws/pytorch_examples/mnist/main.py"</span>, line <span class="dv">140</span>, <span class="kw">in</span> main</span>
+<span id="cb12-109"><a href="#cb12-109" aria-hidden="true" tabindex="-1"></a>    train(args, model, device, train_loader, optimizer, epoch)</span>
+<span id="cb12-110"><a href="#cb12-110" aria-hidden="true" tabindex="-1"></a>  File <span class="st">"/Users/gngdb/ws/pytorch_examples/mnist/main.py"</span>, line <span class="dv">45</span>, <span class="kw">in</span> train</span>
+<span id="cb12-111"><a href="#cb12-111" aria-hidden="true" tabindex="-1"></a>    optimizer.step()</span>
+<span id="cb12-112"><a href="#cb12-112" aria-hidden="true" tabindex="-1"></a>  File <span class="st">"/opt/homebrew/Caskroom/miniconda/base/envs/torch_nightly/lib/python3.11/site-packages/torch/optim/lr_scheduler.py"</span>, line <span class="dv">69</span>, <span class="kw">in</span> wrapper</span>
+<span id="cb12-113"><a href="#cb12-113" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> wrapped(<span class="op">*</span>args, <span class="op">**</span>kwargs)</span>
+<span id="cb12-114"><a href="#cb12-114" aria-hidden="true" tabindex="-1"></a>           <span class="op">^^^^^^^^^^^^^^^^^^^^^^^^</span></span>
+<span id="cb12-115"><a href="#cb12-115" aria-hidden="true" tabindex="-1"></a>  File <span class="st">"/opt/homebrew/Caskroom/miniconda/base/envs/torch_nightly/lib/python3.11/site-packages/torch/optim/optimizer.py"</span>, line <span class="dv">280</span>, <span class="kw">in</span> wrapper</span>
+<span id="cb12-116"><a href="#cb12-116" aria-hidden="true" tabindex="-1"></a>    out <span class="op">=</span> func(<span class="op">*</span>args, <span class="op">**</span>kwargs)</span>
+<span id="cb12-117"><a href="#cb12-117" aria-hidden="true" tabindex="-1"></a>          <span class="op">^^^^^^^^^^^^^^^^^^^^^</span></span>
+<span id="cb12-118"><a href="#cb12-118" aria-hidden="true" tabindex="-1"></a>  File <span class="st">"/opt/homebrew/Caskroom/miniconda/base/envs/torch_nightly/lib/python3.11/site-packages/torch/optim/optimizer.py"</span>, line <span class="dv">33</span>, <span class="kw">in</span> _use_grad</span>
+<span id="cb12-119"><a href="#cb12-119" aria-hidden="true" tabindex="-1"></a>    ret <span class="op">=</span> func(<span class="va">self</span>, <span class="op">*</span>args, <span class="op">**</span>kwargs)</span>
+<span id="cb12-120"><a href="#cb12-120" aria-hidden="true" tabindex="-1"></a>          <span class="op">^^^^^^^^^^^^^^^^^^^^^^^^^^^</span></span>
+<span id="cb12-121"><a href="#cb12-121" aria-hidden="true" tabindex="-1"></a>  File <span class="st">"/opt/homebrew/Caskroom/miniconda/base/envs/torch_nightly/lib/python3.11/site-packages/torch/optim/adadelta.py"</span>, line <span class="dv">108</span>, <span class="kw">in</span> step</span>
+<span id="cb12-122"><a href="#cb12-122" aria-hidden="true" tabindex="-1"></a>    adadelta(</span>
+<span id="cb12-123"><a href="#cb12-123" aria-hidden="true" tabindex="-1"></a>  File <span class="st">"/opt/homebrew/Caskroom/miniconda/base/envs/torch_nightly/lib/python3.11/site-packages/torch/optim/adadelta.py"</span>, line <span class="dv">206</span>, <span class="kw">in</span> adadelta</span>
+<span id="cb12-124"><a href="#cb12-124" aria-hidden="true" tabindex="-1"></a>    func(</span>
+<span id="cb12-125"><a href="#cb12-125" aria-hidden="true" tabindex="-1"></a>  File <span class="st">"/opt/homebrew/Caskroom/miniconda/base/envs/torch_nightly/lib/python3.11/site-packages/torch/optim/adadelta.py"</span>, line <span class="dv">253</span>, <span class="kw">in</span> _single_tensor_adadelta</span>
+<span id="cb12-126"><a href="#cb12-126" aria-hidden="true" tabindex="-1"></a>    acc_delta.mul_(rho).addcmul_(delta, delta, value<span class="op">=</span><span class="dv">1</span> <span class="op">-</span> rho)</span>
+<span id="cb12-127"><a href="#cb12-127" aria-hidden="true" tabindex="-1"></a><span class="pp">KeyboardInterrupt</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="wandb-summary.json" class="level3 cell-output cell-output-display cell-output-markdown">
+<h3 class="anchored" data-anchor-id="wandb-summary.json">wandb-summary.json</h3>
+</section>
+<div class="cell-output cell-output-display cell-output-markdown">
+<div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>{<span class="st">"_wandb"</span>: {<span class="st">"runtime"</span>: <span class="dv">13</span>}}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="argv.txt" class="level3 cell-output cell-output-display cell-output-markdown">
+<h3 class="anchored" data-anchor-id="argv.txt">argv.txt</h3>
+</section>
+<div class="cell-output cell-output-display cell-output-markdown">
+<div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>main.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="conda-environment.yaml" class="level3 cell-output cell-output-display cell-output-markdown">
+<h3 class="anchored" data-anchor-id="conda-environment.yaml">conda-environment.yaml</h3>
+</section>
+<div class="cell-output cell-output-display cell-output-markdown">
+<div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>name: torch_nightly</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>channels:</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> pytorch<span class="op">-</span>nightly</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> conda<span class="op">-</span>forge</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> defaults</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>dependencies:</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> appnope<span class="op">=</span><span class="fl">0.1.3</span><span class="op">=</span>pyhd8ed1ab_0</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> asttokens<span class="op">=</span><span class="fl">2.2.1</span><span class="op">=</span>pyhd8ed1ab_0</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> backcall<span class="op">=</span><span class="fl">0.2.0</span><span class="op">=</span>pyh9f0ad1d_0</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> backports<span class="op">=</span><span class="fl">1.0</span><span class="op">=</span>pyhd8ed1ab_3</span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> backports.functools_lru_cache<span class="op">=</span><span class="fl">1.6.4</span><span class="op">=</span>pyhd8ed1ab_0</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> blas<span class="op">=</span><span class="fl">1.0</span><span class="op">=</span>openblas</span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> brotli<span class="op">=</span><span class="fl">1.0.9</span><span class="op">=</span>h1a28f6b_7</span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> brotli<span class="op">-</span><span class="bu">bin</span><span class="op">=</span><span class="fl">1.0.9</span><span class="op">=</span>h1a28f6b_7</span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> brotlipy<span class="op">=</span><span class="fl">0.7.0</span><span class="op">=</span>py311h80987f9_1002</span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> bzip2<span class="op">=</span><span class="fl">1.0.8</span><span class="op">=</span>h620ffc9_4</span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> ca<span class="op">-</span>certificates<span class="op">=</span><span class="fl">2023.05.30</span><span class="op">=</span>hca03da5_0</span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> certifi<span class="op">=</span><span class="fl">2023.5.7</span><span class="op">=</span>py311hca03da5_0</span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> cffi<span class="op">=</span><span class="fl">1.15.1</span><span class="op">=</span>py311h80987f9_3</span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> charset<span class="op">-</span>normalizer<span class="op">=</span><span class="fl">2.0.4</span><span class="op">=</span>pyhd3eb1b0_0</span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> contourpy<span class="op">=</span><span class="fl">1.0.5</span><span class="op">=</span>py311h48ca7d4_0</span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> cryptography<span class="op">=</span><span class="fl">39.0.1</span><span class="op">=</span>py311h834c97f_0</span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> cycler<span class="op">=</span><span class="fl">0.11.0</span><span class="op">=</span>pyhd3eb1b0_0</span>
+<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> debugpy<span class="op">=</span><span class="fl">1.5.1</span><span class="op">=</span>py311h313beb8_0</span>
+<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> decorator<span class="op">=</span><span class="fl">5.1.1</span><span class="op">=</span>pyhd8ed1ab_0</span>
+<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> executing<span class="op">=</span><span class="fl">1.2.0</span><span class="op">=</span>pyhd8ed1ab_0</span>
+<span id="cb15-27"><a href="#cb15-27" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> ffmpeg<span class="op">=</span><span class="fl">4.2.2</span><span class="op">=</span>h04105a8_0</span>
+<span id="cb15-28"><a href="#cb15-28" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> filelock<span class="op">=</span><span class="fl">3.9.0</span><span class="op">=</span>py311hca03da5_0</span>
+<span id="cb15-29"><a href="#cb15-29" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> fonttools<span class="op">=</span><span class="fl">4.25.0</span><span class="op">=</span>pyhd3eb1b0_0</span>
+<span id="cb15-30"><a href="#cb15-30" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> freetype<span class="op">=</span><span class="fl">2.12.1</span><span class="op">=</span>h1192e45_0</span>
+<span id="cb15-31"><a href="#cb15-31" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> gettext<span class="op">=</span><span class="fl">0.21.0</span><span class="op">=</span>h13f89a0_1</span>
+<span id="cb15-32"><a href="#cb15-32" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> giflib<span class="op">=</span><span class="fl">5.2.1</span><span class="op">=</span>h80987f9_3</span>
+<span id="cb15-33"><a href="#cb15-33" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> gmp<span class="op">=</span><span class="fl">6.2.1</span><span class="op">=</span>hc377ac9_3</span>
+<span id="cb15-34"><a href="#cb15-34" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> gmpy2<span class="op">=</span><span class="fl">2.1.2</span><span class="op">=</span>py311h40f64dc_0</span>
+<span id="cb15-35"><a href="#cb15-35" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> gnutls<span class="op">=</span><span class="fl">3.6.15</span><span class="op">=</span>h887c41c_0</span>
+<span id="cb15-36"><a href="#cb15-36" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> icu<span class="op">=</span><span class="fl">68.1</span><span class="op">=</span>hc377ac9_0</span>
+<span id="cb15-37"><a href="#cb15-37" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> idna<span class="op">=</span><span class="fl">3.4</span><span class="op">=</span>py311hca03da5_0</span>
+<span id="cb15-38"><a href="#cb15-38" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> importlib<span class="op">-</span>metadata<span class="op">=</span><span class="fl">6.6.0</span><span class="op">=</span>pyha770c72_0</span>
+<span id="cb15-39"><a href="#cb15-39" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> importlib_metadata<span class="op">=</span><span class="fl">6.6.0</span><span class="op">=</span>hd8ed1ab_0</span>
+<span id="cb15-40"><a href="#cb15-40" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> ipykernel<span class="op">=</span><span class="fl">6.15.0</span><span class="op">=</span>pyh736e0ef_0</span>
+<span id="cb15-41"><a href="#cb15-41" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> ipython<span class="op">=</span><span class="fl">8.14.0</span><span class="op">=</span>pyhd1c38e8_0</span>
+<span id="cb15-42"><a href="#cb15-42" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> jedi<span class="op">=</span><span class="fl">0.18.2</span><span class="op">=</span>pyhd8ed1ab_0</span>
+<span id="cb15-43"><a href="#cb15-43" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> jpeg<span class="op">=</span><span class="dv">9</span><span class="er">e</span><span class="op">=</span>h80987f9_1</span>
+<span id="cb15-44"><a href="#cb15-44" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> jupyter_client<span class="op">=</span><span class="fl">8.2.0</span><span class="op">=</span>pyhd8ed1ab_0</span>
+<span id="cb15-45"><a href="#cb15-45" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> jupyter_core<span class="op">=</span><span class="fl">5.3.0</span><span class="op">=</span>py311hca03da5_0</span>
+<span id="cb15-46"><a href="#cb15-46" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> kiwisolver<span class="op">=</span><span class="fl">1.4.4</span><span class="op">=</span>py311h313beb8_0</span>
+<span id="cb15-47"><a href="#cb15-47" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> lame<span class="op">=</span><span class="fl">3.100</span><span class="op">=</span>h1a28f6b_0</span>
+<span id="cb15-48"><a href="#cb15-48" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> lcms2<span class="op">=</span><span class="fl">2.12</span><span class="op">=</span>hba8e193_0</span>
+<span id="cb15-49"><a href="#cb15-49" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> lerc<span class="op">=</span><span class="fl">3.0</span><span class="op">=</span>hc377ac9_0</span>
+<span id="cb15-50"><a href="#cb15-50" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> libbrotlicommon<span class="op">=</span><span class="fl">1.0.9</span><span class="op">=</span>h1a28f6b_7</span>
+<span id="cb15-51"><a href="#cb15-51" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> libbrotlidec<span class="op">=</span><span class="fl">1.0.9</span><span class="op">=</span>h1a28f6b_7</span>
+<span id="cb15-52"><a href="#cb15-52" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> libbrotlienc<span class="op">=</span><span class="fl">1.0.9</span><span class="op">=</span>h1a28f6b_7</span>
+<span id="cb15-53"><a href="#cb15-53" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> libcxx<span class="op">=</span><span class="fl">14.0.6</span><span class="op">=</span>h848a8c0_0</span>
+<span id="cb15-54"><a href="#cb15-54" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> libdeflate<span class="op">=</span><span class="fl">1.17</span><span class="op">=</span>h80987f9_0</span>
+<span id="cb15-55"><a href="#cb15-55" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> libffi<span class="op">=</span><span class="fl">3.4.2</span><span class="op">=</span>hca03da5_6</span>
+<span id="cb15-56"><a href="#cb15-56" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> libgfortran<span class="op">=</span><span class="fl">5.0.0</span><span class="op">=</span><span class="dv">11_3_0</span><span class="er">_hca03da5_28</span></span>
+<span id="cb15-57"><a href="#cb15-57" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> libgfortran5<span class="op">=</span><span class="fl">11.3.0</span><span class="op">=</span>h009349e_28</span>
+<span id="cb15-58"><a href="#cb15-58" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> libiconv<span class="op">=</span><span class="fl">1.16</span><span class="op">=</span>h1a28f6b_2</span>
+<span id="cb15-59"><a href="#cb15-59" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> libidn2<span class="op">=</span><span class="fl">2.3.1</span><span class="op">=</span>h1a28f6b_0</span>
+<span id="cb15-60"><a href="#cb15-60" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> libopenblas<span class="op">=</span><span class="fl">0.3.21</span><span class="op">=</span>h269037a_0</span>
+<span id="cb15-61"><a href="#cb15-61" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> libopus<span class="op">=</span><span class="fl">1.3</span><span class="op">=</span>h1a28f6b_1</span>
+<span id="cb15-62"><a href="#cb15-62" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> libpng<span class="op">=</span><span class="fl">1.6.39</span><span class="op">=</span>h80987f9_0</span>
+<span id="cb15-63"><a href="#cb15-63" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> libsodium<span class="op">=</span><span class="fl">1.0.18</span><span class="op">=</span>h27ca646_1</span>
+<span id="cb15-64"><a href="#cb15-64" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> libtasn1<span class="op">=</span><span class="fl">4.19.0</span><span class="op">=</span>h80987f9_0</span>
+<span id="cb15-65"><a href="#cb15-65" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> libtiff<span class="op">=</span><span class="fl">4.5.0</span><span class="op">=</span>h313beb8_2</span>
+<span id="cb15-66"><a href="#cb15-66" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> libunistring<span class="op">=</span><span class="fl">0.9.10</span><span class="op">=</span>h1a28f6b_0</span>
+<span id="cb15-67"><a href="#cb15-67" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> libvpx<span class="op">=</span><span class="fl">1.10.0</span><span class="op">=</span>hc377ac9_0</span>
+<span id="cb15-68"><a href="#cb15-68" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> libwebp<span class="op">=</span><span class="fl">1.2.4</span><span class="op">=</span>ha3663a8_1</span>
+<span id="cb15-69"><a href="#cb15-69" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> libwebp<span class="op">-</span>base<span class="op">=</span><span class="fl">1.2.4</span><span class="op">=</span>h80987f9_1</span>
+<span id="cb15-70"><a href="#cb15-70" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> libxml2<span class="op">=</span><span class="fl">2.10.3</span><span class="op">=</span>h372ba2a_0</span>
+<span id="cb15-71"><a href="#cb15-71" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> llvm<span class="op">-</span>openmp<span class="op">=</span><span class="fl">14.0.6</span><span class="op">=</span>hc6e5704_0</span>
+<span id="cb15-72"><a href="#cb15-72" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> lz4<span class="op">-</span>c<span class="op">=</span><span class="fl">1.9.4</span><span class="op">=</span>h313beb8_0</span>
+<span id="cb15-73"><a href="#cb15-73" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> matplotlib<span class="op">=</span><span class="fl">3.7.1</span><span class="op">=</span>py311hca03da5_1</span>
+<span id="cb15-74"><a href="#cb15-74" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> matplotlib<span class="op">-</span>base<span class="op">=</span><span class="fl">3.7.1</span><span class="op">=</span>py311h7aedaa7_1</span>
+<span id="cb15-75"><a href="#cb15-75" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> matplotlib<span class="op">-</span>inline<span class="op">=</span><span class="fl">0.1.6</span><span class="op">=</span>pyhd8ed1ab_0</span>
+<span id="cb15-76"><a href="#cb15-76" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> mpc<span class="op">=</span><span class="fl">1.1.0</span><span class="op">=</span>h8c48613_1</span>
+<span id="cb15-77"><a href="#cb15-77" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> mpfr<span class="op">=</span><span class="fl">4.0.2</span><span class="op">=</span>h695f6f0_1</span>
+<span id="cb15-78"><a href="#cb15-78" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> mpmath<span class="op">=</span><span class="fl">1.2.1</span><span class="op">=</span>py311hca03da5_0</span>
+<span id="cb15-79"><a href="#cb15-79" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> munkres<span class="op">=</span><span class="fl">1.1.4</span><span class="op">=</span>py_0</span>
+<span id="cb15-80"><a href="#cb15-80" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> ncurses<span class="op">=</span><span class="fl">6.4</span><span class="op">=</span>h313beb8_0</span>
+<span id="cb15-81"><a href="#cb15-81" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> nest<span class="op">-</span>asyncio<span class="op">=</span><span class="fl">1.5.6</span><span class="op">=</span>pyhd8ed1ab_0</span>
+<span id="cb15-82"><a href="#cb15-82" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> nettle<span class="op">=</span><span class="fl">3.7.3</span><span class="op">=</span>h84b5d62_1</span>
+<span id="cb15-83"><a href="#cb15-83" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> networkx<span class="op">=</span><span class="fl">2.8.4</span><span class="op">=</span>py311hca03da5_1</span>
+<span id="cb15-84"><a href="#cb15-84" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> numpy<span class="op">=</span><span class="fl">1.24.3</span><span class="op">=</span>py311hb57d4eb_0</span>
+<span id="cb15-85"><a href="#cb15-85" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> numpy<span class="op">-</span>base<span class="op">=</span><span class="fl">1.24.3</span><span class="op">=</span>py311h1d85a46_0</span>
+<span id="cb15-86"><a href="#cb15-86" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> openh264<span class="op">=</span><span class="fl">1.8.0</span><span class="op">=</span>h98b2900_0</span>
+<span id="cb15-87"><a href="#cb15-87" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> openssl<span class="op">=</span><span class="fl">1.1.1</span><span class="er">u</span><span class="op">=</span>h1a28f6b_0</span>
+<span id="cb15-88"><a href="#cb15-88" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> packaging<span class="op">=</span><span class="fl">23.1</span><span class="op">=</span>pyhd8ed1ab_0</span>
+<span id="cb15-89"><a href="#cb15-89" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> parso<span class="op">=</span><span class="fl">0.8.3</span><span class="op">=</span>pyhd8ed1ab_0</span>
+<span id="cb15-90"><a href="#cb15-90" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> pexpect<span class="op">=</span><span class="fl">4.8.0</span><span class="op">=</span>pyh1a96a4e_2</span>
+<span id="cb15-91"><a href="#cb15-91" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> pickleshare<span class="op">=</span><span class="fl">0.7.5</span><span class="op">=</span>py_1003</span>
+<span id="cb15-92"><a href="#cb15-92" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> pillow<span class="op">=</span><span class="fl">9.4.0</span><span class="op">=</span>py311h313beb8_0</span>
+<span id="cb15-93"><a href="#cb15-93" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> pip<span class="op">=</span><span class="fl">23.0.1</span><span class="op">=</span>py311hca03da5_0</span>
+<span id="cb15-94"><a href="#cb15-94" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> platformdirs<span class="op">=</span><span class="fl">2.5.2</span><span class="op">=</span>py311hca03da5_0</span>
+<span id="cb15-95"><a href="#cb15-95" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> prompt<span class="op">-</span>toolkit<span class="op">=</span><span class="fl">3.0.38</span><span class="op">=</span>pyha770c72_0</span>
+<span id="cb15-96"><a href="#cb15-96" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> prompt_toolkit<span class="op">=</span><span class="fl">3.0.38</span><span class="op">=</span>hd8ed1ab_0</span>
+<span id="cb15-97"><a href="#cb15-97" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> ptyprocess<span class="op">=</span><span class="fl">0.7.0</span><span class="op">=</span>pyhd3deb0d_0</span>
+<span id="cb15-98"><a href="#cb15-98" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> pure_eval<span class="op">=</span><span class="fl">0.2.2</span><span class="op">=</span>pyhd8ed1ab_0</span>
+<span id="cb15-99"><a href="#cb15-99" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> pycparser<span class="op">=</span><span class="fl">2.21</span><span class="op">=</span>pyhd3eb1b0_0</span>
+<span id="cb15-100"><a href="#cb15-100" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> pygments<span class="op">=</span><span class="fl">2.15.1</span><span class="op">=</span>pyhd8ed1ab_0</span>
+<span id="cb15-101"><a href="#cb15-101" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> pyopenssl<span class="op">=</span><span class="fl">23.0.0</span><span class="op">=</span>py311hca03da5_0</span>
+<span id="cb15-102"><a href="#cb15-102" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> pyparsing<span class="op">=</span><span class="fl">3.0.9</span><span class="op">=</span>py311hca03da5_0</span>
+<span id="cb15-103"><a href="#cb15-103" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> pysocks<span class="op">=</span><span class="fl">1.7.1</span><span class="op">=</span>py311hca03da5_0</span>
+<span id="cb15-104"><a href="#cb15-104" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> python<span class="op">=</span><span class="fl">3.11.3</span><span class="op">=</span>hc0d8a6c_0</span>
+<span id="cb15-105"><a href="#cb15-105" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> python<span class="op">-</span>dateutil<span class="op">=</span><span class="fl">2.8.2</span><span class="op">=</span>pyhd8ed1ab_0</span>
+<span id="cb15-106"><a href="#cb15-106" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> pytorch<span class="op">=</span><span class="fl">2.1.0</span>.dev20230428<span class="op">=</span>py3<span class="fl">.11_0</span></span>
+<span id="cb15-107"><a href="#cb15-107" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> pyzmq<span class="op">=</span><span class="fl">25.1.0</span><span class="op">=</span>py311h313beb8_0</span>
+<span id="cb15-108"><a href="#cb15-108" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> readline<span class="op">=</span><span class="fl">8.2</span><span class="op">=</span>h1a28f6b_0</span>
+<span id="cb15-109"><a href="#cb15-109" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> requests<span class="op">=</span><span class="fl">2.29.0</span><span class="op">=</span>py311hca03da5_0</span>
+<span id="cb15-110"><a href="#cb15-110" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> setuptools<span class="op">=</span><span class="fl">66.0.0</span><span class="op">=</span>py311hca03da5_0</span>
+<span id="cb15-111"><a href="#cb15-111" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> six<span class="op">=</span><span class="fl">1.16.0</span><span class="op">=</span>pyh6c4a22f_0</span>
+<span id="cb15-112"><a href="#cb15-112" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> sqlite<span class="op">=</span><span class="fl">3.41.2</span><span class="op">=</span>h80987f9_0</span>
+<span id="cb15-113"><a href="#cb15-113" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> stack_data<span class="op">=</span><span class="fl">0.6.2</span><span class="op">=</span>pyhd8ed1ab_0</span>
+<span id="cb15-114"><a href="#cb15-114" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> sympy<span class="op">=</span><span class="fl">1.11.1</span><span class="op">=</span>py311hca03da5_0</span>
+<span id="cb15-115"><a href="#cb15-115" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> tk<span class="op">=</span><span class="fl">8.6.12</span><span class="op">=</span>hb8d0fd4_0</span>
+<span id="cb15-116"><a href="#cb15-116" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> torchaudio<span class="op">=</span><span class="fl">2.1.0</span>.dev20230428<span class="op">=</span>py311_cpu</span>
+<span id="cb15-117"><a href="#cb15-117" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> torchvision<span class="op">=</span><span class="fl">0.16.0</span>.dev20230428<span class="op">=</span>py311_cpu</span>
+<span id="cb15-118"><a href="#cb15-118" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> tornado<span class="op">=</span><span class="fl">6.2</span><span class="op">=</span>py311h80987f9_0</span>
+<span id="cb15-119"><a href="#cb15-119" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> traitlets<span class="op">=</span><span class="fl">5.9.0</span><span class="op">=</span>pyhd8ed1ab_0</span>
+<span id="cb15-120"><a href="#cb15-120" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> typing_extensions<span class="op">=</span><span class="fl">4.5.0</span><span class="op">=</span>py311hca03da5_0</span>
+<span id="cb15-121"><a href="#cb15-121" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> urllib3<span class="op">=</span><span class="fl">1.26.15</span><span class="op">=</span>py311hca03da5_0</span>
+<span id="cb15-122"><a href="#cb15-122" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> wcwidth<span class="op">=</span><span class="fl">0.2.6</span><span class="op">=</span>pyhd8ed1ab_0</span>
+<span id="cb15-123"><a href="#cb15-123" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> wheel<span class="op">=</span><span class="fl">0.38.4</span><span class="op">=</span>py311hca03da5_0</span>
+<span id="cb15-124"><a href="#cb15-124" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> x264<span class="op">=</span><span class="dv">1</span><span class="op">!</span><span class="fl">152.20180806</span><span class="op">=</span>h1a28f6b_0</span>
+<span id="cb15-125"><a href="#cb15-125" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> xz<span class="op">=</span><span class="fl">5.2.10</span><span class="op">=</span>h80987f9_1</span>
+<span id="cb15-126"><a href="#cb15-126" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> zeromq<span class="op">=</span><span class="fl">4.3.4</span><span class="op">=</span>hbdafb3b_1</span>
+<span id="cb15-127"><a href="#cb15-127" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> zipp<span class="op">=</span><span class="fl">3.15.0</span><span class="op">=</span>pyhd8ed1ab_0</span>
+<span id="cb15-128"><a href="#cb15-128" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> zlib<span class="op">=</span><span class="fl">1.2.13</span><span class="op">=</span>h5a0b063_0</span>
+<span id="cb15-129"><a href="#cb15-129" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> zstd<span class="op">=</span><span class="fl">1.5.5</span><span class="op">=</span>hd90d995_0</span>
+<span id="cb15-130"><a href="#cb15-130" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> pip:</span>
+<span id="cb15-131"><a href="#cb15-131" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> absl<span class="op">-</span>py<span class="op">==</span><span class="fl">1.4.0</span></span>
+<span id="cb15-132"><a href="#cb15-132" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> appdirs<span class="op">==</span><span class="fl">1.4.4</span></span>
+<span id="cb15-133"><a href="#cb15-133" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> attrs<span class="op">==</span><span class="fl">23.1.0</span></span>
+<span id="cb15-134"><a href="#cb15-134" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> beautifulsoup4<span class="op">==</span><span class="fl">4.12.2</span></span>
+<span id="cb15-135"><a href="#cb15-135" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> bleach<span class="op">==</span><span class="fl">6.0.0</span></span>
+<span id="cb15-136"><a href="#cb15-136" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> cachetools<span class="op">==</span><span class="fl">5.3.1</span></span>
+<span id="cb15-137"><a href="#cb15-137" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> click<span class="op">==</span><span class="fl">8.1.3</span></span>
+<span id="cb15-138"><a href="#cb15-138" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> dahuffman<span class="op">==</span><span class="fl">0.4.1</span></span>
+<span id="cb15-139"><a href="#cb15-139" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> defusedxml<span class="op">==</span><span class="fl">0.7.1</span></span>
+<span id="cb15-140"><a href="#cb15-140" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> dill<span class="op">==</span><span class="fl">0.3.6</span></span>
+<span id="cb15-141"><a href="#cb15-141" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> docker<span class="op">-</span>pycreds<span class="op">==</span><span class="fl">0.4.0</span></span>
+<span id="cb15-142"><a href="#cb15-142" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> einops<span class="op">==</span><span class="fl">0.6.1</span></span>
+<span id="cb15-143"><a href="#cb15-143" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> fastjsonschema<span class="op">==</span><span class="fl">2.18.0</span></span>
+<span id="cb15-144"><a href="#cb15-144" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> fsspec<span class="op">==</span><span class="fl">2023.6.0</span></span>
+<span id="cb15-145"><a href="#cb15-145" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> gitdb<span class="op">==</span><span class="fl">4.0.10</span></span>
+<span id="cb15-146"><a href="#cb15-146" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> gitpython<span class="op">==</span><span class="fl">3.1.31</span></span>
+<span id="cb15-147"><a href="#cb15-147" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> google<span class="op">-</span>auth<span class="op">==</span><span class="fl">2.21.0</span></span>
+<span id="cb15-148"><a href="#cb15-148" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> google<span class="op">-</span>auth<span class="op">-</span>oauthlib<span class="op">==</span><span class="fl">1.0.0</span></span>
+<span id="cb15-149"><a href="#cb15-149" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> grpcio<span class="op">==</span><span class="fl">1.56.0</span></span>
+<span id="cb15-150"><a href="#cb15-150" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> hjson<span class="op">==</span><span class="fl">3.1.0</span></span>
+<span id="cb15-151"><a href="#cb15-151" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> jinja2<span class="op">==</span><span class="fl">3.1.2</span></span>
+<span id="cb15-152"><a href="#cb15-152" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> jsonschema<span class="op">==</span><span class="fl">4.19.0</span></span>
+<span id="cb15-153"><a href="#cb15-153" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> jsonschema<span class="op">-</span>specifications<span class="op">==</span><span class="fl">2023.7.1</span></span>
+<span id="cb15-154"><a href="#cb15-154" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> jupyterlab<span class="op">-</span>pygments<span class="op">==</span><span class="fl">0.2.2</span></span>
+<span id="cb15-155"><a href="#cb15-155" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> markdown<span class="op">==</span><span class="fl">3.4.3</span></span>
+<span id="cb15-156"><a href="#cb15-156" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> markupsafe<span class="op">==</span><span class="fl">2.1.3</span></span>
+<span id="cb15-157"><a href="#cb15-157" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> mistune<span class="op">==</span><span class="fl">3.0.1</span></span>
+<span id="cb15-158"><a href="#cb15-158" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> mypy<span class="op">-</span>extensions<span class="op">==</span><span class="fl">1.0.0</span></span>
+<span id="cb15-159"><a href="#cb15-159" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> nbclient<span class="op">==</span><span class="fl">0.8.0</span></span>
+<span id="cb15-160"><a href="#cb15-160" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> nbconvert<span class="op">==</span><span class="fl">7.7.4</span></span>
+<span id="cb15-161"><a href="#cb15-161" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> nbformat<span class="op">==</span><span class="fl">5.9.2</span></span>
+<span id="cb15-162"><a href="#cb15-162" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> ninja<span class="op">==</span><span class="fl">1.11.1</span></span>
+<span id="cb15-163"><a href="#cb15-163" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> oauthlib<span class="op">==</span><span class="fl">3.2.2</span></span>
+<span id="cb15-164"><a href="#cb15-164" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> opt<span class="op">-</span>einsum<span class="op">==</span><span class="fl">3.3.0</span></span>
+<span id="cb15-165"><a href="#cb15-165" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> pandas<span class="op">==</span><span class="fl">2.0.3</span></span>
+<span id="cb15-166"><a href="#cb15-166" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> pandocfilters<span class="op">==</span><span class="fl">1.5.0</span></span>
+<span id="cb15-167"><a href="#cb15-167" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> pathtools<span class="op">==</span><span class="fl">0.1.2</span></span>
+<span id="cb15-168"><a href="#cb15-168" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> protobuf<span class="op">==</span><span class="fl">4.22.3</span></span>
+<span id="cb15-169"><a href="#cb15-169" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> psutil<span class="op">==</span><span class="fl">5.9.5</span></span>
+<span id="cb15-170"><a href="#cb15-170" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> py<span class="op">-</span>cpuinfo<span class="op">==</span><span class="fl">9.0.0</span></span>
+<span id="cb15-171"><a href="#cb15-171" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> pyasn1<span class="op">==</span><span class="fl">0.5.0</span></span>
+<span id="cb15-172"><a href="#cb15-172" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> pyasn1<span class="op">-</span>modules<span class="op">==</span><span class="fl">0.3.0</span></span>
+<span id="cb15-173"><a href="#cb15-173" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> pydantic<span class="op">==</span><span class="fl">1.10.9</span></span>
+<span id="cb15-174"><a href="#cb15-174" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> pyre<span class="op">-</span>extensions<span class="op">==</span><span class="fl">0.0.30</span></span>
+<span id="cb15-175"><a href="#cb15-175" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> pytz<span class="op">==</span><span class="fl">2023.3</span></span>
+<span id="cb15-176"><a href="#cb15-176" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> pyyaml<span class="op">==</span><span class="fl">6.0</span></span>
+<span id="cb15-177"><a href="#cb15-177" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> referencing<span class="op">==</span><span class="fl">0.30.2</span></span>
+<span id="cb15-178"><a href="#cb15-178" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> requests<span class="op">-</span>oauthlib<span class="op">==</span><span class="fl">1.3.1</span></span>
+<span id="cb15-179"><a href="#cb15-179" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> rpds<span class="op">-</span>py<span class="op">==</span><span class="fl">0.9.2</span></span>
+<span id="cb15-180"><a href="#cb15-180" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> rsa<span class="op">==</span><span class="fl">4.9</span></span>
+<span id="cb15-181"><a href="#cb15-181" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> seaborn<span class="op">==</span><span class="fl">0.12.2</span></span>
+<span id="cb15-182"><a href="#cb15-182" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> sentry<span class="op">-</span>sdk<span class="op">==</span><span class="fl">1.21.1</span></span>
+<span id="cb15-183"><a href="#cb15-183" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> setproctitle<span class="op">==</span><span class="fl">1.3.2</span></span>
+<span id="cb15-184"><a href="#cb15-184" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> smmap<span class="op">==</span><span class="fl">5.0.0</span></span>
+<span id="cb15-185"><a href="#cb15-185" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> soupsieve<span class="op">==</span><span class="fl">2.4.1</span></span>
+<span id="cb15-186"><a href="#cb15-186" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> tensorboard<span class="op">==</span><span class="fl">2.13.0</span></span>
+<span id="cb15-187"><a href="#cb15-187" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> tensorboard<span class="op">-</span>data<span class="op">-</span>server<span class="op">==</span><span class="fl">0.7.1</span></span>
+<span id="cb15-188"><a href="#cb15-188" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> tinycss2<span class="op">==</span><span class="fl">1.2.1</span></span>
+<span id="cb15-189"><a href="#cb15-189" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> torcheval<span class="op">==</span><span class="fl">0.0.6</span></span>
+<span id="cb15-190"><a href="#cb15-190" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> torchtnt<span class="op">==</span><span class="fl">0.1.0</span></span>
+<span id="cb15-191"><a href="#cb15-191" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> tqdm<span class="op">==</span><span class="fl">4.65.0</span></span>
+<span id="cb15-192"><a href="#cb15-192" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> typing<span class="op">-</span>inspect<span class="op">==</span><span class="fl">0.9.0</span></span>
+<span id="cb15-193"><a href="#cb15-193" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> tzdata<span class="op">==</span><span class="fl">2023.3</span></span>
+<span id="cb15-194"><a href="#cb15-194" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> wandb<span class="op">==</span><span class="fl">0.15.7</span></span>
+<span id="cb15-195"><a href="#cb15-195" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> webencodings<span class="op">==</span><span class="fl">0.5.1</span></span>
+<span id="cb15-196"><a href="#cb15-196" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> werkzeug<span class="op">==</span><span class="fl">2.3.6</span></span>
+<span id="cb15-197"><a href="#cb15-197" aria-hidden="true" tabindex="-1"></a>      <span class="op">-</span> x<span class="op">-</span>transformers<span class="op">==</span><span class="fl">1.16.9</span></span>
+<span id="cb15-198"><a href="#cb15-198" aria-hidden="true" tabindex="-1"></a>prefix: <span class="op">/</span>opt<span class="op">/</span>homebrew<span class="op">/</span>Caskroom<span class="op">/</span>miniconda<span class="op">/</span>base<span class="op">/</span>envs<span class="op">/</span>torch_nightly</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="system_stats.csv" class="level3 cell-output cell-output-display cell-output-markdown">
+<h3 class="anchored" data-anchor-id="system_stats.csv">system_stats.csv</h3>
+</section>
+<div class="cell-output cell-output-display cell-output-markdown">
+<div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>relative_seconds, gpu<span class="fl">.0</span>.gpu, gpu<span class="fl">.0</span>.memoryAllocated, gpu<span class="fl">.0</span>.temp, gpu<span class="fl">.0</span>.powerWatts, gpu<span class="fl">.0</span>.powerPercent, proc.memory.availableMB, memory, proc.memory.rssMB, proc.memory.percent, cpu, cpu<span class="fl">.0</span>.cpu_percent, cpu<span class="fl">.1</span>.cpu_percent, cpu<span class="fl">.2</span>.cpu_percent, cpu<span class="fl">.3</span>.cpu_percent, cpu<span class="fl">.4</span>.cpu_percent, cpu<span class="fl">.5</span>.cpu_percent, cpu<span class="fl">.6</span>.cpu_percent, cpu<span class="fl">.7</span>.cpu_percent, cpu<span class="fl">.8</span>.cpu_percent, cpu<span class="fl">.9</span>.cpu_percent, proc.cpu.threads, network.sent, network.recv, disk</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="dv">0</span>, <span class="fl">74.6</span>, <span class="fl">31.54</span>, <span class="fl">34.14</span>, <span class="fl">6.37</span>, <span class="fl">38.63</span>, <span class="fl">3455.99</span>, <span class="fl">78.9</span>, <span class="fl">386.97</span>, <span class="fl">2.36</span>, <span class="fl">7.22</span>, <span class="fl">29.36</span>, <span class="fl">28.97</span>, <span class="fl">55.53</span>, <span class="fl">31.24</span>, <span class="fl">13.1</span>, <span class="fl">9.1</span>, <span class="fl">5.21</span>, <span class="fl">1.36</span>, <span class="fl">0.71</span>, <span class="fl">0.5</span>, <span class="dv">15</span>, <span class="fl">27940.57</span>, <span class="fl">164717.71</span>, <span class="fl">9.3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="wandb-metadata.json" class="level3 cell-output cell-output-display cell-output-markdown">
+<h3 class="anchored" data-anchor-id="wandb-metadata.json">wandb-metadata.json</h3>
+</section>
+<div class="cell-output cell-output-display cell-output-markdown">
+<div class="sourceCode" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"os"</span>: <span class="st">"macOS-13.5.1-arm64-arm-64bit"</span>,</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"python"</span>: <span class="st">"3.11.3"</span>,</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"heartbeatAt"</span>: <span class="st">"2023-09-08T20:10:04.564308"</span>,</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"startedAt"</span>: <span class="st">"2023-09-08T20:10:04.524040"</span>,</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"docker"</span>: null,</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"cuda"</span>: null,</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"args"</span>: [],</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"state"</span>: <span class="st">"running"</span>,</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">"program"</span>: <span class="st">"/REDACTED/mnist/main.py"</span>,</span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">"codePath"</span>: <span class="st">"mnist/main.py"</span>,</span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">"git"</span>: {</span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>        <span class="st">"remote"</span>: <span class="st">"git@github.com:pytorch/examples.git"</span>,</span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>        <span class="st">"commit"</span>: <span class="st">"cead596caa90600188e1055cd9166ab4e7dfd303"</span></span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>    },</span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>    <span class="st">"email"</span>: <span class="st">"REDACTED"</span>,</span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a>    <span class="st">"root"</span>: <span class="st">"/REDACTED"</span>,</span>
+<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a>    <span class="st">"host"</span>: <span class="st">"Gavias-MacBook-Pro.local"</span>,</span>
+<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a>    <span class="st">"username"</span>: <span class="st">"gngdb"</span>,</span>
+<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a>    <span class="st">"executable"</span>: <span class="st">"/opt/homebrew/Caskroom/miniconda/base/envs/torch_nightly/bin/python"</span>,</span>
+<span id="cb17-21"><a href="#cb17-21" aria-hidden="true" tabindex="-1"></a>    <span class="st">"cpu_count"</span>: <span class="dv">10</span>,</span>
+<span id="cb17-22"><a href="#cb17-22" aria-hidden="true" tabindex="-1"></a>    <span class="st">"cpu_count_logical"</span>: <span class="dv">10</span>,</span>
+<span id="cb17-23"><a href="#cb17-23" aria-hidden="true" tabindex="-1"></a>    <span class="st">"disk"</span>: {</span>
+<span id="cb17-24"><a href="#cb17-24" aria-hidden="true" tabindex="-1"></a>        <span class="st">"total"</span>: <span class="fl">926.3517189025879</span>,</span>
+<span id="cb17-25"><a href="#cb17-25" aria-hidden="true" tabindex="-1"></a>        <span class="st">"used"</span>: <span class="fl">86.2264518737793</span></span>
+<span id="cb17-26"><a href="#cb17-26" aria-hidden="true" tabindex="-1"></a>    },</span>
+<span id="cb17-27"><a href="#cb17-27" aria-hidden="true" tabindex="-1"></a>    <span class="st">"gpuapple"</span>: {</span>
+<span id="cb17-28"><a href="#cb17-28" aria-hidden="true" tabindex="-1"></a>        <span class="st">"type"</span>: <span class="st">"arm"</span>,</span>
+<span id="cb17-29"><a href="#cb17-29" aria-hidden="true" tabindex="-1"></a>        <span class="st">"vendor"</span>: <span class="st">"Apple"</span></span>
+<span id="cb17-30"><a href="#cb17-30" aria-hidden="true" tabindex="-1"></a>    },</span>
+<span id="cb17-31"><a href="#cb17-31" aria-hidden="true" tabindex="-1"></a>    <span class="st">"memory"</span>: {</span>
+<span id="cb17-32"><a href="#cb17-32" aria-hidden="true" tabindex="-1"></a>        <span class="st">"total"</span>: <span class="fl">16.0</span></span>
+<span id="cb17-33"><a href="#cb17-33" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb17-34"><a href="#cb17-34" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="git.patch" class="level3 cell-output cell-output-display cell-output-markdown">
+<h3 class="anchored" data-anchor-id="git.patch">git.patch</h3>
+</section>
+<div class="cell-output cell-output-display cell-output-markdown">
+<div class="sourceCode" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>diff <span class="op">--</span>git a<span class="op">/</span>mnist<span class="op">/</span>main.py b<span class="op">/</span>mnist<span class="op">/</span>main.py</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>index <span class="dv">29</span><span class="er">d81d6</span>..a95afa2 <span class="dv">100644</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="op">---</span> a<span class="op">/</span>mnist<span class="op">/</span>main.py</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="op">+++</span> b<span class="op">/</span>mnist<span class="op">/</span>main.py</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="op">@@</span> <span class="op">-</span><span class="dv">99</span>,<span class="dv">6</span> <span class="op">+</span><span class="dv">99</span>,<span class="dv">10</span> <span class="op">@@</span> <span class="kw">def</span> main():</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>     use_cuda <span class="op">=</span> <span class="kw">not</span> args.no_cuda <span class="kw">and</span> torch.cuda.is_available()</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>     use_mps <span class="op">=</span> <span class="kw">not</span> args.no_mps <span class="kw">and</span> torch.backends.mps.is_available()</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a><span class="op">+</span>    <span class="im">from</span> profane.core <span class="im">import</span> init</span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a><span class="op">+</span></span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a><span class="op">+</span>    init(config<span class="op">=</span><span class="bu">vars</span>(args), project<span class="op">=</span><span class="st">'mnist'</span>)</span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a><span class="op">+</span></span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a>     torch.manual_seed(args.seed)</span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a>     <span class="cf">if</span> use_cuda:</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/gngdb/profane/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
